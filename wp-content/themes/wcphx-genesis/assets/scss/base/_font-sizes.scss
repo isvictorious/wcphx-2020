@@ -1,0 +1,10 @@
+// ========== Font Sizes ========== //
+
+
+
+@each $name, $font-size in $font-sizes {
+
+	.has-#{$name}-font-size {
+		font-size: $font-size;
+	}
+}

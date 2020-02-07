@@ -1,0 +1,17 @@
+// ========== Sidebars ========== //
+
+.sidebar {
+	display: grid;
+	grid-gap: $mobile-spacing;
+	align-content: start;
+	width: 100%;
+	max-width: $widgets--max-width;
+	margin-right: auto;
+	margin-left: auto;
+	&.sidebar-secondary {display: none;}
+  
+	@include media(ms) {grid-gap: $desktop-spacing;}
+	@include media(ml) {grid-template-columns: 1fr 1fr; max-width: $widgets--max-width * 2;}
+	@include media(l) {&.sidebar-primary {grid-template-columns: 1fr;}}
+	@include media(xl) {&.sidebar-secondary {display: grid; grid-template-columns: 1fr;}}
+  }

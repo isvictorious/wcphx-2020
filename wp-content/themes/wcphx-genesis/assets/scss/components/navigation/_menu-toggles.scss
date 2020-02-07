@@ -1,0 +1,52 @@
+// ========== Menu Toggles ========== //
+
+
+
+button.menu-toggle,
+button.sub-menu-toggle {
+	display: block;
+	margin: 0 auto;
+	border-width: 0;
+	overflow: hidden;
+	text-align: center;
+	visibility: visible;
+	@include media($navigation__breakpoint) {display: none; visibility: hidden;}
+}
+
+button.menu-toggle {
+	color: $color--text-dark;
+	background: transparent;
+	font-size: 20px;
+	line-height: 20px;
+	padding: 15px 20px;
+	z-index: 1000;
+	&::before {
+		margin-right: 5px;
+		position: relative;
+		text-rendering: auto;
+		top: 1px;
+	}
+
+	&.activated {
+		color: $color--text-dark;
+		background: transparent;
+
+		&::before {content: "\f335";}
+	}
+}
+
+button.sub-menu-toggle {
+	color: $color--text-dark;
+	background: transparent;
+	padding: 15px;
+	z-index: 100;
+	border-radius: 0;
+	&::before {text-rendering: auto; transform: rotate(0); transition: transform 0.25s ease-in-out;}
+
+	&.activated {
+		color: $color--text-dark;
+		background: transparent;
+
+		&::before {transform: rotate(180deg);}
+	}
+}

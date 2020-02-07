@@ -1,0 +1,14 @@
+// ========== Color Palette ========== //
+
+
+
+@each $name, $color in $colors {
+
+	.has-#{$name}-color {
+		color: $color;
+	}
+
+	.has-#{$name}-background-color {
+		background-color: $color;
+	}
+}

@@ -1,0 +1,23 @@
+// ========== Separators ========== //
+
+hr,
+.wp-block-separator {
+	border: none;
+	border-collapse: collapse;
+	border-top: 2px solid $color--text-dark;
+	clear: both;
+	margin: $desktop-spacing calc(40%) !important;
+
+	&.is-style-wide {margin: $desktop-spacing 0 !important;}
+
+	&.is-style-dots {
+		margin: $desktop-spacing 0 !important;
+		&:before {
+			font-size: 36px;
+			text-align: center;
+			padding-left: 30px;
+			letter-spacing: 30px;
+			@include media(l) {padding-left: 50px; letter-spacing: 50px;}
+		}
+	}
+}

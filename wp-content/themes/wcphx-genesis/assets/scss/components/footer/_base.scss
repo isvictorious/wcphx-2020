@@ -1,0 +1,13 @@
+// ========== Base ========== //
+
+.site-footer {
+	background-color: #fff;
+	font-size: 15px;
+	line-height: 1.5;
+	@include space( padding, all );
+	text-align: center;
+	p {margin-bottom: 0;}
+	.admin-login {
+		margin: 15px 0;
+	}
+}

@@ -1,0 +1,10 @@
+// ========== Base ========== //
+
+.site-header {
+	position: relative;
+	background-color: white;
+	top: 0;
+	width: 100%;
+	box-shadow: 0 0 10px $color--shadow;
+	z-index: 100;
+}

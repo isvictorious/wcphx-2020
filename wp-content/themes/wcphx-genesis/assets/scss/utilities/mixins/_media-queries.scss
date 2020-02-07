@@ -1,0 +1,56 @@
+// ========== Media Query Mixin ========== //
+
+
+
+// – TO USE: "@include media(ml) {...code in here...;}"
+
+@mixin media($break-point) { // Widths of 1px through 320px
+  @if $break-point == "xxs" {
+    @media (min-width: #{$break-point-xxs}) and (max-width: #{$break-point-xs}) {
+      @content;
+    }
+  }
+  @else if $break-point == "xs" { // Widths of 321px through 479px
+    @media (min-width: #{$break-point-xs +1}) {
+      @content;
+    }
+  }
+  @else if $break-point == "s" { // Widths of 480px through 599px
+    @media (min-width: #{$break-point-s}) {
+      @content;
+    }
+  }
+  @else if $break-point == "ms" { // Widths of 600px through 767px
+    @media (min-width: #{$break-point-ms}) {
+      @content;
+    }
+  }
+  @else if $break-point == "ml" { // Widths of 768px through 1023px
+    @media (min-width: #{$break-point-ml}) {
+      @content;
+    }
+  }
+  @else if $break-point == "l" { // Widths of 1024px through 1279px
+    @media (min-width: #{$break-point-l}) {
+      @content;
+    }
+  }
+  @else if $break-point == "xl" { // Widths of 1280px through 1365px
+    @media (min-width: #{$break-point-xl}) {
+      @content;
+    }
+  }
+  @else if $break-point == "xxl" { // Widths of 1366px through 1599px
+    @media (min-width: #{$break-point-xxl}) {
+      @content;
+    }
+  }
+  @else if $break-point == "xxxl" { // Widths of 1600px or greater
+    @media (min-width: #{$break-point-xxxl}) {
+      @content;
+    }
+  }
+  @else {
+    @error "Whoops! No media query value could be retrieved with #{$break-point}"
+  }
+}

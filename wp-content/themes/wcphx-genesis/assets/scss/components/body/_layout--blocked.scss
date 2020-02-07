@@ -1,0 +1,12 @@
+// ========== Site Inner Blocked ========== //
+
+
+
+.content-sidebar-wrap { @include space(padding, rl); }
+
+.content,
+.sidebar .widget {
+    background: $color--quaternary; @include space(padding, all); 
+}
+
+

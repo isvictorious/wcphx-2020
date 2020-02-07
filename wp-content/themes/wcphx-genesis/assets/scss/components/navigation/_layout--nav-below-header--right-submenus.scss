@@ -1,0 +1,30 @@
+// ========== Navigation Below Header - Right Sub Menus ========== //
+
+
+
+.genesis-nav-menu {
+
+	.menu-item > a:focus + ul.sub-menu,
+	.menu-item.sfHover > ul.sub-menu {
+		opacity: 1;
+	}
+
+	.sub-menu {
+		@include media($navigation__breakpoint) {
+			left: 0;
+			.sub-menu {
+				left: $navigation__sub-menu--width;
+				box-shadow: 1px 1px 2px $color--shadow;
+			}	
+		}	
+	}
+}
+
+
+
+// Add a > to sub-menu items with children
+.sub-menu .menu-item-has-children > a:after {
+	@include media($navigation__breakpoint) {
+		transform: rotate( -90deg );
+	}
+}

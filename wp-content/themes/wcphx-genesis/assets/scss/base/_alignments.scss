@@ -1,0 +1,61 @@
+// ========== Alignments ========== //
+
+
+
+.alignleft,
+.alignright,
+.entry-content > *.alignleft,
+.entry-content > *.alignright {
+	float: none;
+	margin: 0;
+	max-width: 100%;
+}
+
+.alignleft,
+.entry-content > *.alignleft {
+	@include media(ms) {
+		float: left;
+		margin: 0 $desktop-spacing $desktop-spacing 0;
+		max-width: calc(50%);
+	}
+}
+
+.alignright,
+.entry-content > *.alignright {
+	@include media(ms) {
+		float: right;
+		margin: 0 0 $desktop-spacing $desktop-spacing;
+		max-width: calc(50%);
+	}
+}
+
+.aligncenter,
+.entry-content > *.aligncenter,
+.alignwide,
+.entry-content > *.alignwide,
+.alignfull,
+.entry-content > *.alignfull, {
+	margin-left: auto;
+	margin-right: auto;
+	@include media(ms) {max-width: calc(65%);}
+}
+
+.full-width-content, .nolayout {
+
+	.alignwide,
+	.entry-content > *.alignwide {
+		margin: $mobile-spacing calc(50% - 50vw);
+		max-width: 100vw;
+		width: auto;
+		@include media(ms) {margin: $desktop-spacing calc(50% - 50vw);}
+		@include media(l) {margin: $desktop-spacing calc(25% - 25vw);}
+	}
+
+	.alignfull,
+	.entry-content > *.alignfull {
+		margin: $mobile-spacing calc(50% - 50vw);
+		max-width: 100vw;
+		width: 100vw;
+		@include media(ms) {margin: $desktop-spacing calc(50% - 50vw);}
+	}
+}

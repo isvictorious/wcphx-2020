@@ -1,0 +1,9 @@
+// ========== After Entry ========== //
+
+.after-entry {
+	@include space(padding, all);
+	box-shadow: 0 0 20px rgba($color--shadow, .2);
+	.widget:last-of-type {
+		margin-bottom: 0;
+	}
+}

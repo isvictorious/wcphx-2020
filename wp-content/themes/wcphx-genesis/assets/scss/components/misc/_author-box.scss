@@ -1,0 +1,6 @@
+// ========== Author Box ========== //
+
+.author-box {
+	@include space(margin, b);
+	p:last-child {margin-bottom: 0;}
+}

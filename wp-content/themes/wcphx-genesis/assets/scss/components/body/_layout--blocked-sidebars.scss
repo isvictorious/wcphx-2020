@@ -1,0 +1,9 @@
+// ========== Site Inner Blocked Sidebars ========== //
+
+
+
+.content-sidebar-wrap { @include space(padding, rl); }
+
+.sidebar .widget { background: $color--quaternary; @include space(padding, all); }
+
+

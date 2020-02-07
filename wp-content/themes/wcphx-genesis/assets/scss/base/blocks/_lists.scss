@@ -1,0 +1,20 @@
+// ========== Lists ========== //
+
+ol, ul {margin: 0; padding: 0;}
+
+.entry-content {
+
+	ol {list-style-type: decimal;}
+	ul {list-style-type: square;}
+}
+
+.entry-content ol,
+.entry-content ul {
+	@include space(margin, tb);
+	padding-left: 30px;
+
+	ol > li {list-style-type: decimal;}
+	ul > li {list-style-type: disc;}
+
+	ol, ul {margin: 0 0 $mobile-spacing;}
+}

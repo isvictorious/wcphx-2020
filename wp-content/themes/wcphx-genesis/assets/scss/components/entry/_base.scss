@@ -1,0 +1,15 @@
+// ========== Base ========== //
+
+.entry > *,
+.entry-comments,
+.comment-respond {
+
+	max-width: $content--max-width;
+	margin-left: auto;
+	margin-right: auto;
+
+	& > *:first-child {
+		margin-top: 0;
+	}
+}
+

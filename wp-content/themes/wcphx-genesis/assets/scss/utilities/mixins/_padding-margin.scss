@@ -1,0 +1,77 @@
+// ========== Padding & Margin Mixin ========== //
+
+
+
+// TO USE: "@include space(padding, all);"
+
+$m : $mobile-spacing;
+$d : $desktop-spacing;
+
+@mixin space( $type, $sides ) {
+
+
+
+	@if $type == "padding" and $sides == "all" {
+		padding: $m;
+		@include media(ms) {padding: $d;}
+	}
+	@else if $type == "padding" and $sides == "tb" {
+		padding-top: $m;
+		padding-bottom: $m;
+		@include media(ms) {padding-top: $d; padding-bottom: $d;}
+	}
+	@else if $type == "padding" and $sides == "rl" {
+		padding-right: $m;
+		padding-left: $m;
+		@include media(ms) {padding-right: $d; padding-left: $d;}
+	}
+	@else if $type == "padding" and $sides == "t" {
+		padding-top: $m;
+		@include media(ms) {padding-top: $d;}
+	}
+	@else if $type == "padding" and $sides == "r" {
+		padding-right: $m;
+		@include media(ms) {padding-right: $d;}
+	}
+	@else if $type == "padding" and $sides == "b" {
+		padding-bottom: $m;
+		@include media(ms) {padding-bottom: $d;}
+	}
+	@else if $type == "padding" and $sides == "l" {
+		padding-left: $m;
+		@include media(ms) {padding-left: $d;}
+	}
+
+
+
+	@if $type == "margin" and $sides == "all" {
+		margin: $m;
+		@include media(ms) {margin: $d;}
+	}
+	@else if $type == "margin" and $sides == "tb" {
+		margin-top: $m;
+		margin-bottom: $m;
+		@include media(ms) {margin-top: $d; margin-bottom: $d;}
+	}
+	@else if $type == "margin" and $sides == "rl" {
+		margin-right: $m;
+		margin-left: $m;
+		@include media(ms) {margin-right: $d; margin-left: $d;}
+	}
+	@else if $type == "margin" and $sides == "t" {
+		margin-top: $m;
+		@include media(ms) {margin-top: $d;}
+	}
+	@else if $type == "margin" and $sides == "r" {
+		margin-right: $m;
+		@include media(ms) {margin-right: $d;}
+	}
+	@else if $type == "margin" and $sides == "b" {
+		margin-bottom: $m;
+		@include media(ms) {margin-bottom: $d;}
+	}
+	@else if $type == "margin" and $sides == "l" {
+		margin-left: $m;
+		@include media(ms) {margin-left: $d;}
+	}
+}

@@ -1,0 +1,64 @@
+// ========== Title Area ========== //
+
+
+
+// Without Custom Logo.
+.title-area {
+	text-align: center;
+	@include space(padding, all);
+
+	.site-title {
+		font-size: 30px;
+		font-weight: 700;
+		margin-bottom: 0;
+		a {
+			color: $color--text-dark;
+			&:hover, &:focus {
+				color: $color--link-dark-hover;
+				text-decoration: none;
+			}
+		}
+	}
+	
+	.site-description {
+		border: 0;
+		clip: rect(0, 0, 0, 0);
+		height: 1px;
+		overflow: hidden;
+		position: absolute !important;
+		width: 1px;
+		word-wrap: normal !important;
+	}
+}
+
+
+
+// With Custom Logo.
+.wp-custom-logo {
+
+	.title-area {
+		text-align: center;
+		padding-top: 30px;
+		padding-bottom: 30px;
+		@include media(ml) {padding-top: 10px; padding-bottom: 10px;}
+
+		img {
+			display: block;
+			width: 100%;
+			max-width: 350px;
+			height: auto;
+			margin: auto;
+		}
+	}
+
+	.site-title,
+	.site-description {
+		border: 0;
+		clip: rect(0, 0, 0, 0);
+		height: 1px;
+		overflow: hidden;
+		position: absolute !important;
+		width: 1px;
+		word-wrap: normal !important;
+	}
+}

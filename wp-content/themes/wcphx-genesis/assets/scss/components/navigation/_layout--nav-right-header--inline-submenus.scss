@@ -1,0 +1,68 @@
+// ========== Navigation Below Header ========== //
+
+
+
+.site-header .wrap {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	max-width: $content-sidebar-wrap--max-width;
+	margin: 0 auto;
+	@include media(ms) {justify-content: space-between;}
+
+	.title-area {
+		flex-basis: 100%;
+		@include media(ms) {flex-basis: auto;}
+	}
+}
+
+
+
+.nav-primary {
+	flex-basis: 100%;
+	@include media($navigation__breakpoint) {
+		flex-basis: auto;
+	}
+}
+
+
+
+.genesis-nav-menu {
+
+	.menu-item > a:focus + ul.sub-menu,
+	.menu-item.sfHover > ul.sub-menu {
+		left: auto;
+		opacity: 1;
+	}
+
+	.sub-menu {
+		right: 0;
+		@include media($navigation__breakpoint) {
+			.sub-menu {
+				position: relative;
+				box-shadow: none;
+			}	
+		}	
+	}
+}
+
+
+
+.menu-toggle {
+	margin: 0;
+	@include space(margin, rl);
+}
+
+
+
+// Add a > to sub-menu items with children
+.sub-menu .menu-item-has-children > a:after {
+	@include media($navigation__breakpoint) {
+		transform: rotate( 360deg );
+	}
+}
+
+.sfHover.menu-item-has-children > a:after  {
+	transform: rotate( 180deg );
+}

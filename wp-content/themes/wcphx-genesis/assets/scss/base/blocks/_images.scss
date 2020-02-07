@@ -1,0 +1,18 @@
+// ========== Images ========== //
+
+.entry-content img {max-width: 100%;}
+
+.wp-block-image,
+.alignright,
+.alignleft,
+.aligncenter {
+
+	img {border-radius: 15px;}
+
+}
+
+.alignwide,
+.alignfull {
+
+	img {border-radius: 0;}
+}

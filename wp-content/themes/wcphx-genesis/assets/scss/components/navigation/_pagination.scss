@@ -1,0 +1,18 @@
+// ========== Pagination ========== //
+
+.pagination {
+	li {display: inline-block;}
+
+	a {
+		display: inline-block;
+		color: $color--text-light;
+		background: $color--secondary;
+		font-weight: 700;
+		text-decoration: none;
+		padding: 8px 12px;
+		margin-bottom: 5px;
+		&:hover, &:focus, .active & {
+			background: $color--link-dark-hover;
+		}
+	}
+}

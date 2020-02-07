@@ -1,0 +1,21 @@
+// ========== Typography ========== //
+
+
+
+// Font Defaults
+
+    $body--font-size    : 18px;
+    $body--line-height  : 1.35;
+
+// Font Stacks
+
+    $font-stack--primary        : 'Source Sans Pro', sans-serif;
+    $font-stack--secondary      : serif;
+
+
+// Gutenberg Font Sizes Array
+
+    $font-sizes:    ( small,    14px ),
+                    ( normal,   18px ),
+                    ( large,    24px ),
+                    ( largest,  32px );

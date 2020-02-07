@@ -1,0 +1,24 @@
+// ========== Avatars ========== //
+
+.avatar {
+	border-radius: 50%;
+	float: left;
+
+	.alignright & {
+		margin-left: 20px;
+	}
+
+	.author-box &,
+	.alignleft & {
+		margin-right: 20px;
+	}
+
+	.comment & {
+		margin: 0 15px 20px 0;
+	}
+}
+
+
+
+
+

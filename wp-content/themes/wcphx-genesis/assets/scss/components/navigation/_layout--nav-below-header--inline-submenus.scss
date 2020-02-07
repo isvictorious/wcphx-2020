@@ -1,0 +1,34 @@
+// ========== Navigation Below Header - Inline Sub Menus ========== //
+
+
+
+.genesis-nav-menu {
+
+	.menu-item > a:focus + ul.sub-menu,
+	.menu-item.sfHover > ul.sub-menu {
+		left: auto;
+		opacity: 1;
+	}
+
+	.sub-menu {
+		@include media($navigation__breakpoint) {
+			.sub-menu {
+				position: relative;
+				box-shadow: none;
+			}	
+		}	
+	}
+}
+
+
+
+// Add a > to sub-menu items with children
+.sub-menu .menu-item-has-children > a:after {
+	@include media($navigation__breakpoint) {
+		transform: rotate( 360deg );		
+	}
+}
+
+.sfHover.menu-item-has-children > a:after  {
+	transform: rotate( 180deg );
+}

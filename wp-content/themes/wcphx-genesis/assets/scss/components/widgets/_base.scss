@@ -1,0 +1,37 @@
+// ========== Base ========== //
+
+.widget-title {
+	font-size: 30px;
+	font-weight: 600;
+	margin: 0 0 $mobile-spacing;
+}
+
+.widget {
+
+	ul > li {
+		margin-bottom: 15px;
+		&:last-of-type {
+			padding-bottom: 0;
+		}
+	}
+
+	ol > li {
+		margin-bottom: 15px;
+		list-style-position: inside;
+		list-style-type: decimal;
+		padding-left: $mobile-spacing;
+		text-indent: -$mobile-spacing;
+	}
+
+	li li {
+		border: 0;
+		margin: 0 0 0 $desktop-spacing;
+		padding: 0;
+	}
+
+	p:last-child,
+	ul > li:last-of-type,
+	ol > li:last-of-type {
+		margin-bottom: 0;
+	}
+}

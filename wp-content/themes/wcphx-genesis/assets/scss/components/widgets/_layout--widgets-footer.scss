@@ -1,0 +1,36 @@
+// ========== Footer Widgets ========== //
+
+.footer-widgets {
+	border-top: 5px solid #eee;
+}
+
+.footer-widgets .wrap {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	@include space(padding, all);
+	@include media(ms) {flex-direction: row; align-items: stretch;}
+}
+
+.footer-widget-area {
+	display: none;
+	flex-basis: 1;
+	padding: 10px $mobile-spacing;
+	max-width: $widgets--max-width;
+	border-left: 1px solid #eee;
+	@include media(ms) {padding: 10px $desktop-spacing;}
+
+	&:first-child {display: block; border-left: none;}
+	@include media(ml) {&:nth-child(2) {display: block;}}
+	@include media(l) {&:nth-child(3) {display: block;}}
+	@include media(xl) {display: block;}
+
+	.widget {
+		margin-bottom: $mobile-spacing;
+		@include media(ms) {margin-bottom: $desktop-spacing;}
+		&:last-child {margin-bottom: 0;}
+	}
+}
+
+

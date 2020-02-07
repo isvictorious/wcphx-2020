@@ -1,0 +1,70 @@
+// ========== Base ========== //
+
+
+// Navigation Settings.
+$navigation__breakpoint         : l;
+$navigation__sub-menu--width    : 200px;
+
+
+.genesis-nav-menu {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	margin: 0 auto;
+	z-index: 100;
+	@include media($navigation__breakpoint) {
+		flex-direction: row;
+		@include space(padding, rl);
+	}
+
+	.menu-item {
+		display: flex;
+		flex-flow: wrap;
+		position: relative;
+
+		a {
+			flex: 1;
+			outline-offset: -1px;
+			text-decoration: none !important;
+		}
+	}
+
+	.sub-menu {
+		display: none;
+		flex: 1 100%;
+		left: -9999px;
+		opacity: 1;
+		padding-left: $mobile-spacing;
+		width: $navigation__sub-menu--width;
+		z-index: 99;
+
+		@include media($navigation__breakpoint) {
+			position: absolute;
+			box-shadow: 0 2px 3px $color--shadow;
+			padding-left: 0;
+			transition: opacity 0.4s ease-in-out;
+		}	
+	}
+	& > .menu-item > .sub-menu {top: 100%;}
+}
+
+
+
+// Set mobile menu breakpoint
+.genesis-responsive-menu {
+	display: none;
+	@include media($navigation__breakpoint) {display: block;}
+}
+
+
+
+// Add a > to sub-menu items with children
+.sub-menu .menu-item-has-children > a:after {
+	@include media($navigation__breakpoint) {
+		display: inline-block;
+		float: right;
+		content: "\f347";
+        font-family: dashicons;
+        transition: 0.4s ease-in-out;
+	}
+}

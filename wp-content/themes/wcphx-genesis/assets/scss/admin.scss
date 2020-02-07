@@ -1,0 +1,22 @@
+// ========== Admin Styles SCSS ========== //
+
+@import 'utilities/index';
+@import 'base/color-palette';
+@import 'base/font-sizes';
+
+
+
+.editor-post-title__block.wp-block {
+	max-width: $content--max-width;
+}
+
+.wp-block {
+	max-width: $content--max-width;
+
+    &[data-align="wide"] {
+		max-width: none;
+		@include media(xxl) {margin-left: calc(25vw - 25%); margin-right: calc(25vw - 25%);}
+	}
+
+	&[data-align="full"] {max-width: none;}
+}

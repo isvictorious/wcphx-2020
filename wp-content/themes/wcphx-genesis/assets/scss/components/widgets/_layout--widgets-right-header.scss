@@ -1,0 +1,33 @@
+// ========== Widgets Right Header ========== //
+
+
+
+.site-header .wrap {
+	@include media($navigation__breakpoint) {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: center;
+		max-width: $content-sidebar-wrap--max-width;
+		margin: 0 auto;
+	}
+}
+
+.header-widget-area {
+	display: grid;
+	grid-auto-flow: column;
+	grid-gap: $mobile-spacing;
+	align-items: center;
+	margin: 0 auto;
+	max-width: $widgets--max-width;
+	@include space(padding, all);
+	@include media($navigation__breakpoint) {
+		grid-gap: $desktop-spacing;
+		margin: 0;
+		max-width: none;
+	}
+}
+
+.nav-primary {
+	flex-basis: 100%;
+}
