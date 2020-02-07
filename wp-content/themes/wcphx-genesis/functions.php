@@ -1,6 +1,6 @@
 <?php
 /**
- * Genesis Sample.
+ * WordCamp Phoenix Genesis
  *
  * This file adds functions to the Genesis Sample Theme.
  *

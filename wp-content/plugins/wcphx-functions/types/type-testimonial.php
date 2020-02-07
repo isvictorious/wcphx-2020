@@ -109,3 +109,58 @@ function wcphx_testimonial_notices( $messages ) {
     return $messages;
 }
 add_filter( 'post_updated_messages', 'wcphx_testimonial_notices' );
+
+
+function ac_custom_column_settings_a7d28d77() {
+
+	ac_register_columns( 'testimonial', array(
+		array(
+			'columns' => array(
+				'title' => array(
+					'type' => 'title',
+					'label' => 'Title',
+					'width' => '',
+					'width_unit' => '%',
+					'edit' => 'on',
+					'sort' => 'on',
+					'name' => 'title',
+					'label_type' => '',
+					'bulk-editing' => '',
+					'export' => '',
+					'search' => ''
+				),
+				'5e3d90cfb4e03' => array(
+					'type' => 'column-featured_image',
+					'label' => 'Featured Image',
+					'width' => '',
+					'width_unit' => '%',
+					'featured_image_display' => 'image',
+					'image_size' => 'cpac-custom',
+					'image_size_w' => '60',
+					'image_size_h' => '60',
+					'edit' => 'on',
+					'sort' => 'on',
+					'filter' => 'off',
+					'filter_label' => '',
+					'name' => '5e3d90cfb4e03',
+					'label_type' => '',
+					'bulk-editing' => '',
+					'export' => '',
+					'search' => ''
+				),
+				'5e3d90cfb5ddc' => array(
+					'type' => 'column-actions',
+					'label' => 'Actions',
+					'width' => '',
+					'width_unit' => '%',
+					'use_icons' => '',
+					'name' => '5e3d90cfb5ddc',
+					'label_type' => '',
+					'export' => ''
+				)
+			),
+			
+		)
+	) );
+}
+add_action( 'ac/ready', 'ac_custom_column_settings_a7d28d77' );
