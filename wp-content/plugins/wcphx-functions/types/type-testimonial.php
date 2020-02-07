@@ -111,6 +111,13 @@ function wcphx_testimonial_notices( $messages ) {
 add_filter( 'post_updated_messages', 'wcphx_testimonial_notices' );
 
 
+/**
+ * Admin Columns Pro settings for Testimonials
+ *
+ * @return void
+ * 
+ * @link https://www.admincolumns.com/documentation/guides/how-to-use-php-exported-column-settings/
+ */
 function ac_custom_column_settings_a7d28d77() {
 
 	ac_register_columns( 'testimonial', array(
