@@ -1,13 +1,13 @@
 <?php
 
 // Register Custom Post Type
-function service_post_type() {
+function testimonial_post_type() {
 
 	$labels = array(
-		'name'                  => _x( 'Services', 'Post Type General Name', 'text_domain' ),
-		'singular_name'         => _x( 'Service', 'Post Type Singular Name', 'text_domain' ),
-		'menu_name'             => __( 'Services', 'text_domain' ),
-		'name_admin_bar'        => __( 'Service', 'text_domain' ),
+		'name'                  => _x( 'Testimonials', 'Post Type General Name', 'text_domain' ),
+		'singular_name'         => _x( 'Testimonial', 'Post Type Singular Name', 'text_domain' ),
+		'menu_name'             => __( 'Testimonials', 'text_domain' ),
+		'name_admin_bar'        => __( 'Testimonial', 'text_domain' ),
 		'archives'              => __( 'Item Archives', 'text_domain' ),
 		'attributes'            => __( 'Item Attributes', 'text_domain' ),
 		'parent_item_colon'     => __( 'Parent Item:', 'text_domain' ),
@@ -33,8 +33,8 @@ function service_post_type() {
 		'filter_items_list'     => __( 'Filter items list', 'text_domain' ),
 	);
 	$args = array(
-		'label'                 => __( 'Service', 'text_domain' ),
-		'description'           => __( 'Service information page.', 'text_domain' ),
+		'label'                 => __( 'Testimonial', 'text_domain' ),
+		'description'           => __( 'Testimonial information page.', 'text_domain' ),
 		'labels'                => $labels,
 		'supports'              => array( 'title', 'editor', 'thumbnail', 'revisions' ),
 		'taxonomies'            => array( 'category' ),
@@ -52,7 +52,7 @@ function service_post_type() {
 		'publicly_queryable'    => true,
 		'capability_type'       => 'page',
 	);
-	register_post_type( 'services', $args );
+	register_post_type( 'testimonials', $args );
 
 }
-add_action( 'init', 'service_post_type', 0 );
+add_action( 'init', 'testimonial_post_type', 0 );

@@ -1,37 +1,3 @@
-/* fonts:
-================================================================================= */
-/* Quarto */
-@import url("https://use.typekit.net/eoe4wyl.css");
-/* Gilroy Extra Bold */
-@font-face {
-  font-family: 'gilroyextrabold';
-  src: url("fonts/gilroy-extrabold-webfont.woff2") format("woff2"), url("fonts/gilroy-extrabold-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-/* Gilroy Semibold */
-@font-face {
-  font-family: 'gilroysemibold';
-  src: url("fonts/gilroy-semibold-webfont.woff2") format("woff2"), url("fonts/gilroy-semibold-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-/* Gilroy Regular */
-@font-face {
-  font-family: 'gilroyregular';
-  src: url("fonts/gilroy-regular-webfont.woff2") format("woff2"), url("fonts/gilroy-regular-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-/* Gilroy Light */
-@font-face {
-  font-family: 'gilroylight';
-  src: url("fonts/gilroy-light-webfont.woff2") format("woff2"), url("fonts/gilroy-light-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-/* Variable Declarations:
-================================================================================= */
 /*
 Theme Name: Icreon Genesis
 Theme URI: https://demo.studiopress.com/
@@ -50,139 +16,117 @@ License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
 Text Domain: icreon-genesis
 */
+
 /* Table of Contents
 - HTML5 Reset
-- Baseline Normalize
-- Box Sizing
-- Float Clearing
+	- Baseline Normalize
+	- Box Sizing
+	- Float Clearing
 - Defaults
-- Typographical Elements
-- Headings
-- Objects
-- Gallery
-- Forms
-- Tables
-- Screen Reader Text
+	- Typographical Elements
+	- Headings
+	- Objects
+	- Gallery
+	- Forms
+	- Tables
+	- Screen Reader Text
 - Structure and Layout
-- Site Container
-- Site Inner
+	- Site Container
+	- Site Inner
 - Common Classes
-- Avatar
-- Genesis
-- Search Form
-- Titles
-- WordPress
+	- Avatar
+	- Genesis
+	- Search Form
+	- Titles
+	- WordPress
 - Widgets
-- Featured Content
+	- Featured Content
 - Plugins
-- Genesis eNews Extended
-- Genesis Simple FAQ
-- WPForms
+	- Genesis eNews Extended
+	- Genesis Simple FAQ
+	- WPForms
 - Skip Links
 - Site Header
-- Title Area
+	- Title Area
 - Site Navigation
-- Responsive Menu
-- Header Menu
-- Footer Menu
+	- Responsive Menu
+	- Header Menu
+	- Footer Menu
 - Content Area
-- Entry Content
-- Entry Meta
-- Pagination
-- Entry Comments
+	- Entry Content
+	- Entry Meta
+	- Pagination
+	- Entry Comments
 - Sidebar
 - Footer Widgets
 - Site Footer
 - Media Queries
-- Min-width: 960px
-  - Site Header
-  - Genesis Menu
-  - Responsive Menu
-  - Header Menu
-  - Site Inner
-  - Content
-  - Sidebar
-  - Author Box
-  - After Entry
-  - Column Classes
-  - Entry Misc.
-  - Footer Widgets
+	- Min-width: 960px
+		- Site Header
+		- Genesis Menu
+		- Responsive Menu
+		- Header Menu
+		- Site Inner
+		- Content
+		- Sidebar
+		- Author Box
+		- After Entry
+		- Column Classes
+		- Entry Misc.
+		- Footer Widgets
 - Print Styles
 */
+
 /* HTML5 Reset
 ---------------------------------------------------------------------------- */
+
 /* normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css
 ---------------------------------------------------------------------------- */
 /* stylelint-disable */
-/* line 90, style.scss */
 html {
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
 }
-
-/* line 94, style.scss */
 body {
   margin: 0;
 }
-
-/* line 97, style.scss */
 main {
   display: block;
 }
-
-/* line 100, style.scss */
 h1 {
   font-size: 2em;
   margin: 0.67em 0;
 }
-
-/* line 104, style.scss */
 hr {
-  -webkit-box-sizing: content-box;
-          box-sizing: content-box;
+  box-sizing: content-box;
   height: 0;
   overflow: visible;
 }
-
-/* line 109, style.scss */
 pre {
   font-family: monospace, monospace;
   font-size: 1em;
 }
-
-/* line 113, style.scss */
 a {
   background-color: transparent;
 }
-
-/* line 116, style.scss */
 abbr[title] {
   border-bottom: none;
   text-decoration: underline;
-  -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted;
+  text-decoration: underline dotted;
 }
-
-/* line 121, style.scss */
 b,
 strong {
   font-weight: bolder;
 }
-
-/* line 125, style.scss */
 code,
 kbd,
 samp {
   font-family: monospace, monospace;
   font-size: 1em;
 }
-
-/* line 131, style.scss */
 small {
   font-size: 80%;
 }
-
-/* line 134, style.scss */
 sub,
 sup {
   font-size: 75%;
@@ -190,23 +134,15 @@ sup {
   position: relative;
   vertical-align: baseline;
 }
-
-/* line 141, style.scss */
 sub {
   bottom: -0.25em;
 }
-
-/* line 144, style.scss */
 sup {
   top: -0.5em;
 }
-
-/* line 147, style.scss */
 img {
   border-style: none;
 }
-
-/* line 150, style.scss */
 button,
 input,
 optgroup,
@@ -217,28 +153,20 @@ textarea {
   line-height: 1.15;
   margin: 0;
 }
-
-/* line 160, style.scss */
 button,
 input {
   overflow: visible;
 }
-
-/* line 164, style.scss */
 button,
 select {
   text-transform: none;
 }
-
-/* line 168, style.scss */
 [type="button"],
 [type="reset"],
 [type="submit"],
 button {
   -webkit-appearance: button;
 }
-
-/* line 174, style.scss */
 [type="button"]::-moz-focus-inner,
 [type="reset"]::-moz-focus-inner,
 [type="submit"]::-moz-focus-inner,
@@ -246,108 +174,77 @@ button::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
-
-/* line 181, style.scss */
 [type="button"]:-moz-focusring,
 [type="reset"]:-moz-focusring,
 [type="submit"]:-moz-focusring,
 button:-moz-focusring {
   outline: 1px dotted ButtonText;
 }
-
-/* line 187, style.scss */
 fieldset {
   padding: 0.35em 0.75em 0.625em;
 }
-
-/* line 190, style.scss */
 legend {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   color: inherit;
   display: table;
   max-width: 100%;
   padding: 0;
   white-space: normal;
 }
-
-/* line 198, style.scss */
 progress {
   vertical-align: baseline;
 }
-
-/* line 201, style.scss */
 textarea {
   overflow: auto;
 }
-
-/* line 204, style.scss */
 [type="checkbox"],
 [type="radio"] {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   padding: 0;
 }
-
-/* line 209, style.scss */
 [type="number"]::-webkit-inner-spin-button,
 [type="number"]::-webkit-outer-spin-button {
   height: auto;
 }
-
-/* line 213, style.scss */
 [type="search"] {
   -webkit-appearance: textfield;
   outline-offset: -2px;
 }
-
-/* line 217, style.scss */
 [type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
-
-/* line 220, style.scss */
 ::-webkit-file-upload-button {
   -webkit-appearance: button;
   font: inherit;
 }
-
-/* line 224, style.scss */
 details {
   display: block;
 }
-
-/* line 227, style.scss */
 summary {
   display: list-item;
 }
-
-/* line 230, style.scss */
 [hidden],
 template {
   display: none;
 }
-
 /* stylelint-enable */
+
 /* Box Sizing
 --------------------------------------------- */
-/* line 239, style.scss */
+
 html {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-/* line 243, style.scss */
 *,
 *::before,
 *::after {
-  -webkit-box-sizing: inherit;
-          box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 /* Float Clearing
 --------------------------------------------- */
-/* line 252, style.scss */
+
 .author-box::before,
 .clearfix::before,
 .entry::before,
@@ -366,7 +263,6 @@ html {
   display: table;
 }
 
-/* line 270, style.scss */
 .author-box::after,
 .clearfix::after,
 .entry::after,
@@ -388,19 +284,19 @@ html {
 
 /* Defaults
 ---------------------------------------------------------------------------- */
+
 /* Typographical Elements
 --------------------------------------------- */
-/* line 295, style.scss */
+
 html {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
 }
 
-/* line 300, style.scss */
 body {
   background-color: #fff;
-  color: #9e9e9e;
-  font-family: "gilroylight", serif;
+  color: #333;
+  font-family: "Source Sans Pro", sans-serif;
   font-size: 18px;
   font-weight: 400;
   line-height: 1.625;
@@ -408,7 +304,6 @@ body {
   overflow-x: hidden;
 }
 
-/* line 311, style.scss */
 button,
 input:focus,
 input[type="button"],
@@ -417,44 +312,36 @@ input[type="submit"],
 textarea:focus,
 .button,
 .gallery img {
-  -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
 
-/* line 322, style.scss */
 a {
-  color: #90E4BB;
+  color: #0073e5;
   text-decoration: underline;
-  -webkit-transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
   transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
 }
 
-/* line 328, style.scss */
 a:focus,
 a:hover {
   color: #333;
   text-decoration: none;
 }
 
-/* line 334, style.scss */
 p {
   margin: 0 0 30px;
   padding: 0;
 }
 
-/* line 339, style.scss */
 ol,
 ul {
   margin: 0;
   padding: 0;
 }
 
-/* line 345, style.scss */
 li {
   list-style-type: none;
 }
 
-/* line 349, style.scss */
 hr {
   border: none;
   border-collapse: collapse;
@@ -463,98 +350,78 @@ hr {
   margin: 30px 0;
 }
 
-/* line 357, style.scss */
 b,
 strong {
   font-weight: 700;
 }
 
-/* line 362, style.scss */
 blockquote,
 cite,
 em,
 i {
-  font-style: normal;
+  font-style: italic;
 }
 
-/* line 369, style.scss */
 mark {
   background: #ddd;
   color: #333;
 }
 
-/* line 374, style.scss */
 blockquote {
   margin: 30px;
 }
 
 /* Headings
 --------------------------------------------- */
-/* line 381, style.scss */
+
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  font-family: "big-caslon-fb", serif;
-  color: #111;
+  font-family: "Source Sans Pro", sans-serif;
   font-weight: 400;
-  line-height: 60px;
+  line-height: 1.2;
   margin: 0 0 20px;
 }
 
-/* line 394, style.scss */
 h1 {
-  font-size: 60px;
-}
-
-/* line 398, style.scss */
-.entry-content h1 {
-  font-size: 50px;
-  font-weight: 600;
-}
-
-/* line 403, style.scss */
-h2 {
-  font-size: 50px;
-}
-
-/* line 407, style.scss */
-h3 {
-  font-size: 34px;
-}
-
-/* line 411, style.scss */
-.entry-content h3 {
-  font-family: "gilroyregular", serif;
   font-size: 30px;
-  line-height: 50px;
 }
 
-/* line 417, style.scss */
+h2 {
+  font-size: 27px;
+}
+
+h3 {
+  font-size: 24px;
+}
+
 h4 {
   font-size: 20px;
 }
 
-/* line 421, style.scss */
+.entry-content h3,
+.entry-content h4 {
+  font-weight: 600;
+}
+
 .entry-content h4 {
   margin-top: 40px;
 }
 
-/* line 425, style.scss */
 h5 {
   font-size: 18px;
 }
 
-/* line 429, style.scss */
 h6 {
   font-size: 16px;
 }
 
 /* Objects
 --------------------------------------------- */
-/* line 436, style.scss */
+
 embed,
 iframe,
 img,
@@ -564,84 +431,70 @@ video,
   max-width: 100%;
 }
 
-/* line 445, style.scss */
 img {
   height: auto;
   vertical-align: top;
 }
 
-/* line 450, style.scss */
 figure {
   margin: 0;
 }
 
 /* Gallery
 --------------------------------------------- */
-/* line 457, style.scss */
+
 .gallery {
   overflow: hidden;
 }
 
-/* line 461, style.scss */
 .gallery img {
   border: 1px solid #eee;
   height: auto;
   padding: 4px;
 }
 
-/* line 467, style.scss */
 .gallery img:focus,
 .gallery img:hover {
   border: 1px solid #999;
   outline: none;
 }
 
-/* line 473, style.scss */
 .gallery-columns-1 .gallery-item {
   width: 100%;
 }
 
-/* line 477, style.scss */
 .gallery-columns-2 .gallery-item {
   width: 50%;
 }
 
-/* line 481, style.scss */
 .gallery-columns-3 .gallery-item {
   width: 33%;
 }
 
-/* line 485, style.scss */
 .gallery-columns-4 .gallery-item {
   width: 25%;
 }
 
-/* line 489, style.scss */
 .gallery-columns-5 .gallery-item {
   width: 20%;
 }
 
-/* line 493, style.scss */
 .gallery-columns-6 .gallery-item {
   width: 16.6666%;
 }
 
-/* line 497, style.scss */
 .gallery-columns-7 .gallery-item {
   width: 14.2857%;
 }
 
-/* line 501, style.scss */
 .gallery-columns-8 .gallery-item {
   width: 12.5%;
 }
 
-/* line 505, style.scss */
 .gallery-columns-9 .gallery-item {
   width: 11.1111%;
 }
 
-/* line 509, style.scss */
 .gallery-columns-2 .gallery-item:nth-child(2n + 1),
 .gallery-columns-3 .gallery-item:nth-child(3n + 1),
 .gallery-columns-4 .gallery-item:nth-child(4n + 1),
@@ -653,7 +506,6 @@ figure {
   clear: left;
 }
 
-/* line 520, style.scss */
 .gallery-item {
   float: left;
   margin: 0 0 30px;
@@ -662,66 +514,46 @@ figure {
 
 /* Forms
 --------------------------------------------- */
-/* line 529, style.scss */
+
 input,
 select,
 textarea {
   background-color: #fff;
   border: 1px solid #ddd;
-  color: #111;
-  font-family: "gilroysemibold", serif;
+  color: #333;
   font-size: 18px;
   font-weight: 400;
-  letter-spacing: 1px;
   padding: 15px;
   width: 100%;
 }
 
-/* line 543, style.scss */
 input:focus,
 textarea:focus {
   border: 1px solid #999;
   outline: none;
 }
 
-/* line 549, style.scss */
 input[type="checkbox"],
 input[type="image"],
 input[type="radio"] {
   width: auto;
 }
 
-/* line 555, style.scss */
 ::-ms-input-placeholder {
   color: #333;
   opacity: 1;
 }
 
-/* line 560, style.scss */
 :-ms-input-placeholder {
   color: #333;
   opacity: 1;
 }
 
-/* line 565, style.scss */
-::-webkit-input-placeholder {
-  color: #333;
-  opacity: 1;
-}
-:-ms-input-placeholder {
-  color: #333;
-  opacity: 1;
-}
-::-ms-input-placeholder {
-  color: #333;
-  opacity: 1;
-}
 ::placeholder {
   color: #333;
   opacity: 1;
 }
 
-/* line 570, style.scss */
 button,
 input[type="button"],
 input[type="reset"],
@@ -729,23 +561,20 @@ input[type="submit"],
 .site-container div.wpforms-container-full .wpforms-form input[type="submit"],
 .site-container div.wpforms-container-full .wpforms-form button[type="submit"],
 .button {
-  background-color: #90E4BB;
+  background-color: #333;
   border: 0;
-  border-radius: 40px;
+  border-radius: 5px;
   color: #fff;
   cursor: pointer;
   font-size: 16px;
   font-weight: 600;
-  padding: 10px 20px;
+  padding: 15px 30px;
   text-align: center;
   text-decoration: none;
-  text-transform: uppercase;
-  letter-spacing: 2px;
   white-space: normal;
   width: auto;
 }
 
-/* line 593, style.scss */
 button:focus,
 button:hover,
 input[type="button"]:focus,
@@ -755,40 +584,37 @@ input[type="reset"]:hover,
 input[type="submit"]:focus,
 input[type="submit"]:hover,
 .site-container
-div.wpforms-container-full
-.wpforms-form
-input[type="submit"]:focus,
+  div.wpforms-container-full
+  .wpforms-form
+  input[type="submit"]:focus,
 .site-container
-div.wpforms-container-full
-.wpforms-form
-input[type="submit"]:hover,
+  div.wpforms-container-full
+  .wpforms-form
+  input[type="submit"]:hover,
 .site-container
-div.wpforms-container-full
-.wpforms-form
-button[type="submit"]:focus,
+  div.wpforms-container-full
+  .wpforms-form
+  button[type="submit"]:focus,
 .site-container
-div.wpforms-container-full
-.wpforms-form
-button[type="submit"]:hover,
+  div.wpforms-container-full
+  .wpforms-form
+  button[type="submit"]:hover,
 .button:focus,
 .button:hover {
-  background-color: #b9eed4 !important;
+  background-color: #0073e5;
   border-width: 0;
   color: #fff;
 }
 
-/* line 624, style.scss */
 .entry-content .button:focus,
 .entry-content .button:hover {
   color: #fff;
 }
 
-/* line 629, style.scss */
 .button {
   display: inline-block;
 }
 
-/* line 633, style.scss */
 .site-container button:disabled,
 .site-container button:disabled:hover,
 .site-container input:disabled,
@@ -805,7 +631,6 @@ button[type="submit"]:hover,
   cursor: not-allowed;
 }
 
-/* line 649, style.scss */
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-results-button {
   display: none;
@@ -813,7 +638,7 @@ input[type="search"]::-webkit-search-results-button {
 
 /* Tables
 --------------------------------------------- */
-/* line 657, style.scss */
+
 table {
   border-collapse: collapse;
   border-spacing: 0;
@@ -823,37 +648,31 @@ table {
   word-break: break-all;
 }
 
-/* line 666, style.scss */
 tbody {
   border-bottom: 1px solid #eee;
 }
 
-/* line 670, style.scss */
 td,
 th {
   text-align: left;
   vertical-align: top;
 }
 
-/* line 676, style.scss */
 td {
   border-top: 1px solid #eee;
   padding: 10px;
 }
 
-/* line 681, style.scss */
 th {
   font-weight: 600;
   padding: 0 10px 10px;
 }
 
-/* line 686, style.scss */
 td:first-child,
 th:first-child {
   padding-left: 0;
 }
 
-/* line 691, style.scss */
 td:last-child,
 th:last-child {
   padding-right: 0;
@@ -861,7 +680,7 @@ th:last-child {
 
 /* Screen Reader Text
 --------------------------------------------- */
-/* line 699, style.scss */
+
 .screen-reader-shortcut,
 .screen-reader-text,
 .screen-reader-text span {
@@ -874,13 +693,11 @@ th:last-child {
   word-wrap: normal !important;
 }
 
-/* line 711, style.scss */
 .screen-reader-text:focus,
 .screen-reader-shortcut:focus,
 .widget_search input[type="submit"]:focus {
   background: #fff;
-  -webkit-box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
-          box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
   clip: auto !important;
   color: #333;
   display: block;
@@ -890,11 +707,9 @@ th:last-child {
   padding: 15px 23px 14px;
   text-decoration: none;
   width: auto;
-  z-index: 100000;
-  /* Above WP toolbar. */
+  z-index: 100000; /* Above WP toolbar. */
 }
 
-/* line 728, style.scss */
 .more-link {
   display: inline-block;
   position: relative;
@@ -903,35 +718,28 @@ th:last-child {
 
 /* Structure and Layout
 ---------------------------------------------------------------------------- */
+
 /* Site Container
 --------------------------------------------- */
-/* line 740, style.scss */
-.site-container {
-  -webkit-animation: fadein 1s;
-          animation: fadein 1s;
-  word-wrap: break-word;
-}
 
-@-webkit-keyframes fadein {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+.site-container {
+  animation: fadein 1s;
+  word-wrap: break-word;
 }
 
 @keyframes fadein {
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
 }
+
 /* Site Inner
 --------------------------------------------- */
-/* line 758, style.scss */
+
 .site-inner {
   clear: both;
   margin: 0 auto;
@@ -940,52 +748,46 @@ th:last-child {
 
 /* Common Classes
 ---------------------------------------------------------------------------- */
+
 /* Avatar
 --------------------------------------------- */
-/* line 770, style.scss */
+
 .avatar {
   border-radius: 50%;
   float: left;
 }
 
-/* line 775, style.scss */
 .author-box .avatar,
 .alignleft .avatar {
   margin-right: 20px;
 }
 
-/* line 780, style.scss */
 .alignright .avatar {
   margin-left: 20px;
 }
 
-/* line 784, style.scss */
 .comment .avatar {
   margin: 0 15px 20px 0;
 }
 
 /* Genesis
 --------------------------------------------- */
-/* line 791, style.scss */
+
 .after-entry,
 .archive-description,
 .author-box {
   margin-bottom: 40px;
 }
 
-/* line 797, style.scss */
 .after-entry {
-  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
-          box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
   padding: 20px 30px;
 }
 
-/* line 802, style.scss */
 .after-entry .widget:last-of-type {
   margin-bottom: 0;
 }
 
-/* line 806, style.scss */
 .breadcrumb {
   border-bottom: 1px solid #eee;
   font-size: 16px;
@@ -993,7 +795,6 @@ th:last-child {
   padding-bottom: 10px;
 }
 
-/* line 813, style.scss */
 .archive-description p:last-child,
 .author-box p:last-child {
   margin-bottom: 0;
@@ -1001,24 +802,21 @@ th:last-child {
 
 /* Search Form
 --------------------------------------------- */
-/* line 821, style.scss */
+
 .search-form {
   overflow: hidden;
 }
 
-/* line 825, style.scss */
 .entry-content .search-form {
   margin-bottom: 40px;
   width: 50%;
 }
 
-/* line 830, style.scss */
 .post-password-form input[type="submit"],
 .search-form input[type="submit"] {
   margin-top: 10px;
 }
 
-/* line 835, style.scss */
 .widget_search input[type="submit"] {
   border: 0;
   clip: rect(0, 0, 0, 0);
@@ -1031,7 +829,7 @@ th:last-child {
 
 /* Titles
 --------------------------------------------- */
-/* line 848, style.scss */
+
 .archive-description .entry-title,
 .archive-title,
 .author-box-title {
@@ -1040,26 +838,22 @@ th:last-child {
   margin-bottom: 10px;
 }
 
-/* line 856, style.scss */
 .entry-title {
   font-size: 30px;
   margin-bottom: 10px;
 }
 
-/* line 861, style.scss */
 .entry-title a,
 .sidebar .widget-title a {
   color: #333;
   text-decoration: none;
 }
 
-/* line 867, style.scss */
 .entry-title a:focus,
 .entry-title a:hover {
   color: #0073e5;
 }
 
-/* line 872, style.scss */
 .widget-title {
   font-size: 18px;
   font-weight: 600;
@@ -1068,64 +862,55 @@ th:last-child {
 
 /* WordPress
 --------------------------------------------- */
-/* line 881, style.scss */
+
 a.aligncenter img {
   display: block;
   margin: 0 auto;
 }
 
-/* line 886, style.scss */
 a.alignnone {
   display: inline-block;
 }
 
-/* line 890, style.scss */
 .alignleft {
   float: left;
   text-align: left;
 }
 
-/* line 895, style.scss */
 .alignright {
   float: right;
   text-align: right;
 }
 
-/* line 900, style.scss */
 a.alignleft,
 a.alignnone,
 a.alignright {
   max-width: 100%;
 }
 
-/* line 906, style.scss */
 img.centered,
 .aligncenter {
   display: block;
   margin: 0 auto 30px;
 }
 
-/* line 912, style.scss */
 img.alignnone,
 .alignnone {
   margin-bottom: 15px;
 }
 
-/* line 917, style.scss */
 a.alignleft,
 img.alignleft,
 .wp-caption.alignleft {
   margin: 0 20px 20px 0;
 }
 
-/* line 923, style.scss */
 a.alignright,
 img.alignright,
 .wp-caption.alignright {
   margin: 0 0 20px 20px;
 }
 
-/* line 929, style.scss */
 .gallery-caption,
 .wp-caption-text {
   font-size: 14px;
@@ -1134,66 +919,36 @@ img.alignright,
   text-align: center;
 }
 
-/* line 937, style.scss */
 .entry-content p.wp-caption-text {
   margin-bottom: 0;
 }
 
-/* line 941, style.scss */
 .entry-content .wp-audio-shortcode,
 .entry-content .wp-playlist,
 .entry-content .wp-video {
   margin: 0 0 30px;
 }
 
-/* line 948, style.scss */
-.entry-content p a {
-  -webkit-transition: 0.2s all linear;
-  transition: 0.2s all linear;
-  padding-bottom: 3px;
-  -webkit-box-shadow: inset 0 -2px 0 white;
-          box-shadow: inset 0 -2px 0 white;
-  font-family: "gilroysemibold", serif;
-  color: #111 !important;
-  text-decoration: none !important;
-}
-
-/* line 957, style.scss */
-.entry-content p a:hover {
-  -webkit-transition: 0.2s all linear;
-  transition: 0.2s all linear;
-  padding-bottom: 3px;
-  -webkit-box-shadow: inset 0 -2px 0 #90E4BB;
-          box-shadow: inset 0 -2px 0 #90E4BB;
-  font-family: "gilroysemibold", serif;
-  color: #90E4BB !important;
-  text-decoration: none !important;
-}
-
 /* Widgets
 ---------------------------------------------------------------------------- */
-/* line 969, style.scss */
+
 .widget {
   margin-bottom: 40px;
 }
 
-/* line 973, style.scss */
 .widget p:last-child,
 .widget ul > li:last-of-type {
   margin-bottom: 0;
 }
 
-/* line 978, style.scss */
 .widget ul > li {
   margin-bottom: 10px;
 }
 
-/* line 982, style.scss */
 .widget ul > li:last-of-type {
   padding-bottom: 0;
 }
 
-/* line 986, style.scss */
 .widget ol > li {
   list-style-position: inside;
   list-style-type: decimal;
@@ -1201,19 +956,16 @@ img.alignright,
   text-indent: -20px;
 }
 
-/* line 993, style.scss */
 .widget li li {
   border: 0;
   margin: 0 0 0 30px;
   padding: 0;
 }
 
-/* line 999, style.scss */
 .widget_calendar table {
   width: 100%;
 }
 
-/* line 1003, style.scss */
 .widget_calendar td,
 .widget_calendar th {
   text-align: center;
@@ -1221,19 +973,17 @@ img.alignright,
 
 /* Featured Content
 --------------------------------------------- */
-/* line 1011, style.scss */
+
 .featured-content .entry {
   border-bottom: 1px solid #eee;
   margin-bottom: 20px;
 }
 
-/* line 1016, style.scss */
 .featured-content .entry:last-of-type {
   border-bottom: none;
   margin-bottom: 0;
 }
 
-/* line 1021, style.scss */
 .featured-content .entry-title {
   font-size: 16px;
   margin-bottom: 5px;
@@ -1242,45 +992,41 @@ img.alignright,
 
 /* Plugins
 ---------------------------------------------------------------------------- */
+
 /* Genesis eNews Extended
 --------------------------------------------- */
-/* line 1033, style.scss */
+
 .after-entry .enews {
   text-align: center;
   padding: 10px;
 }
 
-/* line 1038, style.scss */
 .sidebar .enews {
   background-color: #f5f5f5;
   padding: 30px;
 }
 
-/* line 1043, style.scss */
 .enews-widget input {
   font-size: 16px;
   margin-bottom: 10px;
 }
 
-/* line 1048, style.scss */
 .after-entry .enews-widget input {
   text-align: center;
 }
 
-/* line 1052, style.scss */
 .enews-widget input[type="submit"] {
   margin: 0;
   width: 100%;
 }
 
-/* line 1057, style.scss */
 .enews form + p {
   margin-top: 20px;
 }
 
 /* Genesis Simple FAQ
 --------------------------------------------- */
-/* line 1064, style.scss */
+
 .gs-faq__question {
   background: transparent;
   border-bottom: 1px solid #eee;
@@ -1289,99 +1035,84 @@ img.alignright,
   padding-right: 0;
 }
 
-/* line 1072, style.scss */
 .gs-faq__question:focus,
 .gs-faq__question:hover {
   background: transparent;
   color: #0073e5;
 }
 
-/* line 1078, style.scss */
 .gs-faq__question::after {
   content: "\f132";
-  font-family: dashicons;
-  /* stylelint-disable-line font-family-no-missing-generic-family-keyword */
+  font-family: dashicons; /* stylelint-disable-line font-family-no-missing-generic-family-keyword */
   float: right;
 }
 
-/* line 1084, style.scss */
 .gs-faq__question.gs-faq--expanded::after {
   content: "\f460";
 }
 
 /* WP Forms
 --------------------------------------------- */
-/* line 1091, style.scss */
+
 .entry-content .wpforms-container {
   margin-bottom: 40px;
 }
 
-/* line 1095, style.scss */
 .entry-content .wpforms-form .wpforms-field {
   clear: both;
   margin: 20px 0;
   overflow: hidden;
 }
 
-/* line 1101, style.scss */
 .site-container .wpforms-container .wpforms-form .wpforms-field input {
   border-radius: 0;
   height: auto;
   padding: 15px;
 }
 
-/* line 1107, style.scss */
 .site-container .entry-content .wpforms-form .wpforms-field-label {
   font-weight: 600;
 }
 
-/* line 1111, style.scss */
 .site-container .entry-content .wpforms-form .wpforms-field-sublabel {
   font-size: 14px;
   font-weight: 300;
 }
 
-/* line 1116, style.scss */
 .entry-content .wpforms-form .wpforms-field-hp {
   display: none !important;
   left: -9000px !important;
   position: absolute !important;
 }
 
-/* line 1122, style.scss */
 .site-container .entry-content .wpforms-form textarea {
   padding: 15px;
 }
 
-/* line 1126, style.scss */
 .site-container .entry-content .wpforms-form textarea.wpforms-field-small {
   height: 120px;
 }
 
-/* line 1130, style.scss */
 .site-container .entry-content .wpforms-form textarea.wpforms-field-medium {
   height: 200px;
 }
 
-/* line 1134, style.scss */
 .site-container .entry-content .wpforms-form textarea.wpforms-field-large {
   height: 300px;
 }
 
 /* Skip Links
 ---------------------------------------------------------------------------- */
-/* line 1141, style.scss */
+
 .genesis-skip-link {
   margin: 0;
 }
 
-/* line 1145, style.scss */
 .genesis-skip-link .skip-link-hidden {
   display: none;
   visibility: hidden;
 }
 
-/* line 1150, style.scss */
 .genesis-skip-link li {
   height: 0;
   list-style: none;
@@ -1389,7 +1120,6 @@ img.alignright,
 }
 
 /* Display outline on focus */
-/* line 1157, style.scss */
 :focus {
   color: #333;
   outline: #ccc solid 1px;
@@ -1397,24 +1127,22 @@ img.alignright,
 
 /* Site Header
 ---------------------------------------------------------------------------- */
-/* line 1165, style.scss */
+
 .site-header {
   background-color: #fff;
-  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
-          box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
   padding: 0 30px;
 }
 
 /* Title Area
 --------------------------------------------- */
-/* line 1174, style.scss */
+
 .title-area {
   float: left;
   padding-bottom: 25px;
   padding-top: 25px;
 }
 
-/* line 1180, style.scss */
 .wp-custom-logo .title-area {
   max-width: 350px;
   padding-bottom: 5px;
@@ -1422,12 +1150,10 @@ img.alignright,
   width: 100%;
 }
 
-/* line 1187, style.scss */
 .wp-custom-logo .title-area img {
   width: auto;
 }
 
-/* line 1191, style.scss */
 .site-title {
   font-size: 20px;
   font-weight: 600;
@@ -1435,7 +1161,6 @@ img.alignright,
   margin-bottom: 0;
 }
 
-/* line 1198, style.scss */
 .site-title a,
 .site-title a:focus,
 .site-title a:hover {
@@ -1443,7 +1168,6 @@ img.alignright,
   text-decoration: none;
 }
 
-/* line 1205, style.scss */
 .site-description,
 .wp-custom-logo .site-title {
   border: 0;
@@ -1457,29 +1181,22 @@ img.alignright,
 
 /* Site Navigation
 ---------------------------------------------------------------------------- */
-/* line 1219, style.scss */
+
 .genesis-nav-menu {
   clear: both;
   line-height: 1;
   width: 100%;
 }
 
-/* line 1225, style.scss */
 .genesis-nav-menu .menu-item {
   display: block;
   float: none;
   position: relative;
 }
 
-/* line 1231, style.scss */
 .genesis-nav-menu a {
-  color: #111;
-  font-family: "gilroysemibold", serif;
-  text-decoration: none;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+  color: #333;
   display: block;
-  border-radius: 40px;
   font-size: 15px;
   font-weight: 400;
   outline-offset: -1px;
@@ -1488,33 +1205,20 @@ img.alignright,
   text-decoration: none;
 }
 
-/* line 1247, style.scss */
 .genesis-nav-menu a:focus,
 .genesis-nav-menu a:hover,
-.genesis-nav-menu .current-menu-item > a {
-  background-color: #90E4BB;
-  color: white !important;
+.genesis-nav-menu .current-menu-item > a,
+.genesis-nav-menu .sub-menu .current-menu-item > a:focus,
+.genesis-nav-menu .sub-menu .current-menu-item > a:hover {
+  color: #0073e5;
+  text-decoration: none;
 }
 
-/* line 1254, style.scss */
-.genesis-nav-menu .current-menu-item > a:hover {
-  color: white;
-}
-
-/* line 1258, style.scss */
 .genesis-nav-menu .sub-menu,
 .genesis-nav-menu .sub-menu a {
   width: 100%;
-  border-radius: 0;
 }
 
-/* line 1264, style.scss */
-.genesis-nav-menu .sub-menu .current-menu-item > a:focus,
-.genesis-nav-menu .sub-menu .current-menu-item > a:hover {
-  color: #90E4BB;
-}
-
-/* line 1269, style.scss */
 .genesis-nav-menu .sub-menu {
   clear: both;
   display: none;
@@ -1526,7 +1230,6 @@ img.alignright,
   z-index: 99;
 }
 
-/* line 1280, style.scss */
 .genesis-nav-menu .sub-menu a {
   background-color: #fff;
   font-size: 14px;
@@ -1534,13 +1237,11 @@ img.alignright,
   word-wrap: break-word;
 }
 
-/* line 1287, style.scss */
 .genesis-nav-menu .menu-item:focus,
 .genesis-nav-menu .menu-item:hover {
   position: relative;
 }
 
-/* line 1292, style.scss */
 .genesis-nav-menu .menu-item:hover > .sub-menu {
   display: block;
   left: auto;
@@ -1549,30 +1250,26 @@ img.alignright,
 
 /* Responsive Menu
 --------------------------------------------- */
-/* line 1301, style.scss */
+
 .menu .menu-item:focus {
   position: static;
 }
 
-/* line 1305, style.scss */
 .menu .menu-item > a:focus + ul.sub-menu,
 .menu .menu-item.sfHover > ul.sub-menu {
   left: auto;
   opacity: 1;
 }
 
-/* line 1311, style.scss */
 .genesis-responsive-menu {
   display: none;
   position: relative;
 }
 
-/* line 1316, style.scss */
 .genesis-responsive-menu .genesis-nav-menu .menu-item:hover > .sub-menu {
   display: none;
 }
 
-/* line 1320, style.scss */
 .menu-toggle,
 .sub-menu-toggle {
   background-color: transparent;
@@ -1585,7 +1282,6 @@ img.alignright,
   visibility: visible;
 }
 
-/* line 1332, style.scss */
 .menu-toggle:focus,
 .menu-toggle:hover,
 .sub-menu-toggle:focus,
@@ -1595,7 +1291,6 @@ img.alignright,
   color: #0073e5;
 }
 
-/* line 1341, style.scss */
 .menu-toggle {
   float: right;
   line-height: 20px;
@@ -1606,12 +1301,10 @@ img.alignright,
   z-index: 1000;
 }
 
-/* line 1351, style.scss */
 .menu-toggle.activated::before {
   content: "\f335";
 }
 
-/* line 1355, style.scss */
 .site-header .menu-toggle::before {
   float: left;
   margin-right: 5px;
@@ -1620,7 +1313,6 @@ img.alignright,
   top: 1px;
 }
 
-/* line 1363, style.scss */
 .sub-menu-toggle {
   float: right;
   padding: 9px 10px;
@@ -1630,32 +1322,24 @@ img.alignright,
   z-index: 100;
 }
 
-/* line 1372, style.scss */
 .sub-menu .sub-menu-toggle {
   padding: 12px 10px;
 }
 
-/* line 1376, style.scss */
 .sub-menu-toggle::before {
   display: inline-block;
   text-rendering: auto;
-  -webkit-transform: rotate(0);
-          transform: rotate(0);
-  -webkit-transition: -webkit-transform 0.25s ease-in-out;
-  transition: -webkit-transform 0.25s ease-in-out;
+  transform: rotate(0);
   transition: transform 0.25s ease-in-out;
-  transition: transform 0.25s ease-in-out, -webkit-transform 0.25s ease-in-out;
 }
 
-/* line 1383, style.scss */
 .sub-menu-toggle.activated::before {
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 
 /* Header Menu
 --------------------------------------------- */
-/* line 1390, style.scss */
+
 .nav-primary {
   clear: left;
   padding-bottom: 15px;
@@ -1665,22 +1349,19 @@ img.alignright,
 
 /* Footer Menu
 --------------------------------------------- */
-/* line 1400, style.scss */
+
 .nav-secondary {
   margin-top: 10px;
 }
 
-/* line 1404, style.scss */
 .nav-secondary .genesis-nav-menu {
   line-height: 1.5;
 }
 
-/* line 1408, style.scss */
 .nav-secondary .menu-item {
   display: inline-block;
 }
 
-/* line 1412, style.scss */
 .nav-secondary a {
   margin-left: 10px;
   margin-right: 10px;
@@ -1689,48 +1370,42 @@ img.alignright,
 
 /* Content Area
 ---------------------------------------------------------------------------- */
+
 /* Entry Content
 --------------------------------------------- */
-/* line 1424, style.scss */
+
 .entry {
   margin-bottom: 40px;
 }
 
-/* line 1428, style.scss */
 .entry-content ol,
 .entry-content ul {
   margin-bottom: 30px;
   padding-left: 40px;
 }
 
-/* line 1434, style.scss */
 .entry-content ol > li {
   list-style-type: decimal;
 }
 
-/* line 1438, style.scss */
 .entry-content ul > li {
   list-style-type: disc;
 }
 
-/* line 1442, style.scss */
 .entry-content ol ul > li,
 .entry-content ul ul > li {
   list-style-type: circle;
 }
 
-/* line 1447, style.scss */
 .entry-content ol ol,
 .entry-content ul ul {
   margin-bottom: 0;
 }
 
-/* line 1452, style.scss */
 .entry-content code {
   background-color: #f5f5f5;
 }
 
-/* line 1456, style.scss */
 .content .sticky {
   background-color: #f5f5f5;
   padding: 30px;
@@ -1738,30 +1413,26 @@ img.alignright,
 
 /* Entry Meta
 --------------------------------------------- */
-/* line 1464, style.scss */
+
 p.entry-meta {
   font-size: 16px;
   margin-bottom: 0;
 }
 
-/* line 1469, style.scss */
 .entry-header .entry-meta {
   margin-bottom: 20px;
 }
 
-/* line 1473, style.scss */
 .entry-footer .entry-meta {
   border-top: 1px solid #eee;
   padding-top: 20px;
 }
 
-/* line 1478, style.scss */
 .entry-categories,
 .entry-tags {
   display: block;
 }
 
-/* line 1483, style.scss */
 .entry-comments-link::before {
   content: "\2014";
   margin: 0 6px 0 2px;
@@ -1769,23 +1440,20 @@ p.entry-meta {
 
 /* Pagination
 --------------------------------------------- */
-/* line 1491, style.scss */
+
 .pagination {
   clear: both;
   margin: 60px 0;
 }
 
-/* line 1496, style.scss */
 .adjacent-entry-pagination {
   margin-bottom: 0;
 }
 
-/* line 1500, style.scss */
 .archive-pagination li {
   display: inline;
 }
 
-/* line 1504, style.scss */
 .archive-pagination li a {
   background-color: #f5f5f5;
   color: #333;
@@ -1798,7 +1466,6 @@ p.entry-meta {
   text-decoration: none;
 }
 
-/* line 1516, style.scss */
 .archive-pagination li a:focus,
 .archive-pagination li a:hover,
 .archive-pagination li.active a {
@@ -1808,62 +1475,52 @@ p.entry-meta {
 
 /* Entry Comments
 --------------------------------------------- */
-/* line 1526, style.scss */
+
 .comment-respond,
 .entry-comments,
 .entry-pings {
   margin-bottom: 40px;
 }
 
-/* line 1532, style.scss */
 .comment-list li {
   padding: 40px 0 0 30px;
 }
 
-/* line 1536, style.scss */
 .comment-list .depth-1 {
   padding-left: 0;
 }
 
-/* line 1540, style.scss */
 .comment-header {
   margin-bottom: 30px;
 }
 
-/* line 1544, style.scss */
 .comment-content {
   clear: both;
 }
 
-/* line 1548, style.scss */
 .comment-content ul > li {
   list-style-type: disc;
 }
 
-/* line 1552, style.scss */
 .comment-respond input[type="email"],
 .comment-respond input[type="text"],
 .comment-respond input[type="url"] {
   width: 50%;
 }
 
-/* line 1558, style.scss */
 .comment-respond label {
   display: block;
   margin-right: 12px;
 }
 
-/* line 1563, style.scss */
 .comment-header p {
   margin-bottom: 0;
 }
 
-/* line 1567, style.scss */
 .entry-pings .reply {
   display: none;
 }
 
-/* line 1571, style.scss */
 .comment-form-cookies-consent label {
   display: inline;
   padding-left: 10px;
@@ -1871,25 +1528,23 @@ p.entry-meta {
 
 /* Sidebar
 ---------------------------------------------------------------------------- */
-/* line 1579, style.scss */
+
 .sidebar {
   font-size: 16px;
   line-height: 1.5;
 }
 
-/* line 1584, style.scss */
 .sidebar .widget {
   margin-bottom: 40px;
 }
 
-/* line 1588, style.scss */
 .sidebar p {
   margin-bottom: 20px;
 }
 
 /* Footer Widgets
 ---------------------------------------------------------------------------- */
-/* line 1595, style.scss */
+
 .footer-widgets {
   border-top: 1px solid #eee;
   background-color: #fff;
@@ -1897,20 +1552,17 @@ p.entry-meta {
   padding: 60px 0;
 }
 
-/* line 1602, style.scss */
 .footer-widgets .wrap {
   margin-left: auto;
   margin-right: auto;
 }
 
-/* line 1607, style.scss */
 .footer-widget-area {
   margin-bottom: 40px;
   padding-left: 30px;
   padding-right: 30px;
 }
 
-/* line 1613, style.scss */
 .footer-widget-area:last-child,
 .footer-widgets .widget:last-child {
   margin-bottom: 0;
@@ -1918,52 +1570,34 @@ p.entry-meta {
 
 /* Site Footer
 ---------------------------------------------------------------------------- */
-/* line 1621, style.scss */
+
 .site-footer {
-  background-color: #111;
-  color: white;
+  background-color: #fff;
+  border-top: 1px solid #eee;
   font-size: 15px;
   line-height: 1.5;
   padding: 30px;
   text-align: center;
 }
 
-/* line 1630, style.scss */
 .site-footer p {
   margin-bottom: 0;
 }
 
-/* line 1634, style.scss */
-.site-footer a {
-  color: white;
-  padding-bottom: 2px;
-  text-decoration: none;
-  -webkit-box-shadow: 0 2px 0 #90E4BB;
-          box-shadow: 0 2px 0 #90E4BB;
-}
-
-/* line 1641, style.scss */
-.site-footer a:hover {
-  color: white;
-  padding-bottom: 2px;
-  text-decoration: none;
-  -webkit-box-shadow: 0 2px 0 white;
-          box-shadow: 0 2px 0 white;
-}
-
 /* Media Queries
 ---------------------------------------------------------------------------- */
+
 @media only screen and (min-width: 480px) {
-  /* line 1652, style.scss */
   table {
     table-layout: auto;
     word-break: normal;
   }
 }
+
 @media only screen and (min-width: 960px) {
   /* Site Header
-    --------------------------------------------- */
-  /* line 1662, style.scss */
+	--------------------------------------------- */
+
   .site-header {
     position: -webkit-sticky;
     position: sticky;
@@ -1971,30 +1605,26 @@ p.entry-meta {
     z-index: 9999;
   }
 
-  /* line 1669, style.scss */
   .admin-bar .site-header {
     top: 32px;
   }
 
   /* Genesis Menu
-    --------------------------------------------- */
-  /* line 1676, style.scss */
+	--------------------------------------------- */
+
   .genesis-nav-menu .menu-item {
     display: inline-block;
   }
 
-  /* line 1680, style.scss */
   .genesis-nav-menu .menu-item:focus,
   .genesis-nav-menu .menu-item:hover {
     position: relative;
   }
 
-  /* line 1685, style.scss */
   .genesis-nav-menu > .menu-bold > a {
     font-weight: 700;
   }
 
-  /* line 1689, style.scss */
   .genesis-nav-menu > .menu-highlight > a {
     background-color: #333;
     border-radius: 3px;
@@ -2005,29 +1635,24 @@ p.entry-meta {
     padding-right: 20px;
   }
 
-  /* line 1699, style.scss */
   .genesis-nav-menu > .menu-highlight > a:focus,
   .genesis-nav-menu > .menu-highlight > a:hover {
     background-color: #0073e5;
   }
 
-  /* line 1704, style.scss */
   .genesis-nav-menu .sub-menu,
   .genesis-nav-menu .sub-menu a {
     width: 180px;
   }
 
-  /* line 1709, style.scss */
   .genesis-nav-menu .sub-menu {
     border-top: 1px solid #eee;
     opacity: 0;
     padding-left: 0;
     position: absolute;
-    -webkit-transition: opacity 0.4s ease-in-out;
     transition: opacity 0.4s ease-in-out;
   }
 
-  /* line 1717, style.scss */
   .genesis-nav-menu .sub-menu a {
     border: 1px solid #eee;
     border-top: 0;
@@ -2035,20 +1660,18 @@ p.entry-meta {
     padding-top: 15px;
   }
 
-  /* line 1724, style.scss */
   .genesis-nav-menu .sub-menu .sub-menu {
     margin: -46px 0 0 179px;
   }
 
   /* Responsive Menu
-    --------------------------------------------- */
-  /* line 1731, style.scss */
+	--------------------------------------------- */
+
   .genesis-responsive-menu {
     display: block;
     padding-top: 15px;
   }
 
-  /* line 1736, style.scss */
   .menu-toggle,
   .sub-menu-toggle {
     display: none;
@@ -2056,57 +1679,38 @@ p.entry-meta {
   }
 
   /* Header Menu
-    --------------------------------------------- */
-  /* line 1745, style.scss */
+	--------------------------------------------- */
+
   .nav-primary {
     clear: none;
     float: right;
     width: auto;
   }
 
-  /* line 1751, style.scss */
-  .genesis-nav-menu a:hover {
-    color: #111 !important;
-    background-color: #90E4BB;
-  }
-
-  /* line 1756, style.scss */
   .nav-primary .genesis-nav-menu a {
-    padding-left: 35px;
-    padding-right: 35px;
-  }
-
-  /* line 1761, style.scss */
-  .nav-primary .genesis-nav-menu a:hover {
-    color: #90E4BB;
-    background-color: white;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 
   /* Site-Inner
-    --------------------------------------------- */
-  /* line 1769, style.scss */
+	--------------------------------------------- */
+
   .site-inner {
     max-width: 1140px;
   }
 
   /* Content
-    --------------------------------------------- */
-  /* line 1776, style.scss */
+	--------------------------------------------- */
+
   .content {
     float: left;
     width: 65%;
   }
 
-  .full-width-content .content {
-    width: 80%;
-  }
-
-  /* line 1781, style.scss */
   .sidebar-content .content {
     float: right;
   }
 
-  /* line 1785, style.scss */
   .full-width-content .content,
   .landing-page .content {
     float: none;
@@ -2115,42 +1719,40 @@ p.entry-meta {
   }
 
   /* Sidebar
-    --------------------------------------------- */
-  /* line 1795, style.scss */
+	--------------------------------------------- */
+
   .sidebar {
     float: right;
     width: 30%;
   }
 
-  /* line 1800, style.scss */
   .sidebar-content .sidebar {
     float: left;
   }
 
   /* Author Box
-    --------------------------------------------- */
-  /* line 1807, style.scss */
+	--------------------------------------------- */
+
   .author-box {
     background-color: #f5f5f5;
     padding: 30px;
   }
 
   /* After Entry
-    --------------------------------------------- */
-  /* line 1815, style.scss */
+	--------------------------------------------- */
+
   .after-entry {
     padding: 40px 60px;
   }
 
-  /* line 1819, style.scss */
   .after-entry .enews {
     padding-left: 30px;
     padding-right: 30px;
   }
 
   /* Column Classes
-    --------------------------------------------- */
-  /* line 1827, style.scss */
+	--------------------------------------------- */
+
   .five-sixths,
   .four-sixths,
   .one-fourth,
@@ -2166,54 +1768,46 @@ p.entry-meta {
     margin-left: 2.564102564102564%;
   }
 
-  /* line 1842, style.scss */
   .one-half,
   .three-sixths,
   .two-fourths {
     width: 48.717948717948715%;
   }
 
-  /* line 1848, style.scss */
   .one-third,
   .two-sixths {
     width: 31.623931623931625%;
   }
 
-  /* line 1853, style.scss */
   .four-sixths,
   .two-thirds {
     width: 65.81196581196582%;
   }
 
-  /* line 1858, style.scss */
   .one-fourth {
     width: 23.076923076923077%;
   }
 
-  /* line 1862, style.scss */
   .three-fourths {
     width: 74.35897435897436%;
   }
 
-  /* line 1866, style.scss */
   .one-sixth {
     width: 14.52991452991453%;
   }
 
-  /* line 1870, style.scss */
   .five-sixths {
     width: 82.90598290598291%;
   }
 
-  /* line 1874, style.scss */
   .first {
     clear: both;
     margin-left: 0;
   }
 
   /* Entry Misc.
-    --------------------------------------------- */
-  /* line 1882, style.scss */
+	--------------------------------------------- */
+
   .after-entry,
   .archive-description,
   .author-box,
@@ -2225,68 +1819,60 @@ p.entry-meta {
   }
 
   /* Footer Widgets
-    --------------------------------------------- */
-  /* line 1895, style.scss */
+	--------------------------------------------- */
+
   .footer-widgets .wrap {
     max-width: 1140px;
   }
 
-  /* line 1899, style.scss */
   .footer-widget-area {
     float: left;
     margin-bottom: 0;
     width: calc(100% / 3);
   }
 }
+
 /* Print Styles
 ---------------------------------------------------------------------------- */
+
 @media print {
-  /* line 1910, style.scss */
   *,
   *::before,
   *::after {
     background: transparent !important;
-    -webkit-box-shadow: none !important;
-            box-shadow: none !important;
+    box-shadow: none !important;
     color: #333 !important;
     text-shadow: none !important;
   }
 
-  /* line 1919, style.scss */
   a,
   a:visited {
     text-decoration: underline;
   }
 
-  /* line 1924, style.scss */
   a[href]::after {
     content: " (" attr(href) ")";
   }
 
-  /* line 1928, style.scss */
   abbr[title]::after {
     content: " (" attr(title) ")";
   }
 
-  /* line 1932, style.scss */
   a[href^="javascript:"]::after,
   a[href^="#"]::after,
   .site-title > a::after {
     content: "";
   }
 
-  /* line 1938, style.scss */
   thead {
     display: table-header-group;
   }
 
-  /* line 1942, style.scss */
   img,
   tr {
     page-break-inside: avoid;
   }
 
-  /* line 1947, style.scss */
   img {
     max-width: 100% !important;
   }
@@ -2294,7 +1880,7 @@ p.entry-meta {
   @page {
     margin: 2cm 0.5cm;
   }
-  /* line 1955, style.scss */
+
   p,
   h2,
   h3 {
@@ -2302,20 +1888,17 @@ p.entry-meta {
     widows: 3;
   }
 
-  /* line 1962, style.scss */
   blockquote,
   pre {
     border: 1px solid #999;
     page-break-inside: avoid;
   }
 
-  /* line 1968, style.scss */
   .content,
   .content-sidebar {
     width: 100%;
   }
 
-  /* line 1973, style.scss */
   button,
   input,
   select,
@@ -2339,31 +1922,26 @@ p.entry-meta {
     display: none !important;
   }
 
-  /* line 1996, style.scss */
   .title-area {
     text-align: center;
     width: 100%;
   }
 
-  /* line 2001, style.scss */
   .site-title > a {
     margin: 0;
     text-decoration: none;
     text-indent: 0;
   }
 
-  /* line 2007, style.scss */
   .site-inner {
     padding-top: 0;
     position: relative;
   }
 
-  /* line 2012, style.scss */
   .author-box {
     margin-bottom: 0;
   }
 
-  /* line 2016, style.scss */
   h1,
   h2,
   h3,
@@ -2376,25 +1954,20 @@ p.entry-meta {
     widows: 3;
   }
 
-  /* line 2028, style.scss */
   img {
     page-break-after: avoid;
     page-break-inside: avoid;
   }
 
-  /* line 2033, style.scss */
   blockquote,
   pre,
   table {
     page-break-inside: avoid;
   }
 
-  /* line 2039, style.scss */
   dl,
   ol,
   ul {
     page-break-before: avoid;
   }
 }
-
-/*# sourceMappingURL=style.css.map */
