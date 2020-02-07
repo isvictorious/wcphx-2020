@@ -1,6 +1,6 @@
 <?php
 /**
- * Genesis Sample.
+ * WordCamp Phoenix Genesis
  *
  * This file adds functions to the Genesis Sample Theme.
  *
@@ -229,4 +229,176 @@ function genesis_sample_comments_gravatar( $args ) {
 
 
 /* NEW STUFF
----------------------------------- */
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+/**
+ * Modify the placeholder text in the editor
+ *
+ * @return void
+ */
+function wcphx_editor_placeholder() {
+    $placeholder = 'Start writing or add a block with / WCPHX';
+    return $placeholder;
+}
+add_filter( 'write_your_story', 'wcphx_editor_placeholder' );
+
+
+/**
+ * Disable custom colors in Gutenberg editor
+ * 
+ * @link https://www.billerickson.net/wordpress-color-palette-button-styling-gutenberg/
+ */
+add_theme_support('disable-custom-colors');
+
+
+/**
+ * Limit Instant Images to Admins
+ *
+ * @link https://connekthq.com/plugins/instant-images/faqs/#6
+ */
+function wcphx_instant_images_user_role(){   
+	// https://codex.wordpress.org/Roles_and_Capabilities	   
+	return 'activate_plugins';
+}
+add_filter('instant_images_user_role', 'wcphx_instant_images_user_role');
+
+
+/**
+ * Remove default Genesis Theme supports
+ * 
+ * @link https://studiopress.github.io/genesis/developer-features/theme-support/
+ */
+remove_theme_support( 'genesis-inpost-layouts' );
+remove_theme_support( 'genesis-archive-layouts' );
+
+
+/**
+ * Remove Genesis Script Metabox from Editor
+ * 
+ * @link
+ */
+
+function wcphx_remove_genesis_scripts_box() {
+  remove_meta_box('genesis_inpost_scripts_box', 'page', 'normal');
+  remove_meta_box('genesis_inpost_scripts_box', 'post', 'normal');
+}
+add_action('admin_menu', 'wcphx_remove_genesis_scripts_box');
+
+
+/**
+ * Remove genesis options from posts & pages
+ * 
+ * @link http://url.com
+ */
+function wcphx_genesis_editor_init()
+{
+	remove_post_type_support('page', 'custom-fields');
+	remove_post_type_support('page', 'genesis-seo');
+	remove_post_type_support('page', 'genesis-scripts');
+	remove_post_type_support('page', 'genesis-layouts');
+	remove_post_type_support('page', 'genesis-breadcrumbs-toggle');
+	remove_post_type_support('page', 'genesis-title-toggle');
+	remove_post_type_support('page', 'genesis-singular-images');
+	remove_post_type_support('post', 'custom-fields');
+	remove_post_type_support('post', 'genesis-seo');
+	remove_post_type_support('post', 'genesis-scripts');
+	remove_post_type_support('post', 'genesis-layouts');
+	remove_post_type_support('post', 'genesis-breadcrumbs-toggle');
+	remove_post_type_support('post', 'genesis-title-toggle');
+	remove_post_type_support('post', 'genesis-singular-images');
+}
+add_action('admin_init', 'wcphx_genesis_editor_init');
+
+
+/**
+ * Bill Erickson's be_archive_post class
+ * Add column classes to CPTs on archives
+ *
+ * @link	
+ * 
+ * @param [type] $classes
+ * @return void
+ */
+function wcphx_archive_post_class( $classes ) {
+	global $wp_query;
+
+	$post_types = array('client', 'service', 'industry' );
+
+	if( !is_post_type_archive( $post_types ) ) {
+		return $classes;
+	}
+
+	$classes[] = 'one-half';
+	if( 0 == $wp_query->current_post % 2 )
+		$classes[] = 'first';
+	return $classes;
+}
+add_filter( 'post_class', 'wcphx_archive_post_class' );
+
+
+/**
+ * Remove Post Info, Post Meta from Archive Pages
+ *
+ * @link https://coolestguidesontheplanet.com/remove-post-info-and-meta-from-archives-in-genesis-theme-in-wordpress/
+ */
+function wcphx_archive_remove_post_meta() {
+
+	$post_types = array('client', 'service', 'industry' );
+
+	if ( is_post_type_archive( $post_types ) || is_singular( $post_types ) ) {
+		remove_action( 'genesis_entry_header', 'genesis_post_info', 12 );
+		remove_action( 'genesis_entry_footer', 'genesis_post_meta' );
+		}
+}
+add_action ( 'genesis_entry_header', 'wcphx_archive_remove_post_meta' );
+
+
+/**
+ * 
+ * Move Featured Image Before Entry Title On Archive Pages
+ * 
+ * @link https://wpsites.net/web-design/move-featured-image-before-entry-title-on-archive-pages/
+ * 
+ */
+remove_action( 'genesis_entry_content', 'genesis_do_post_image', 8 );
+add_action( 'genesis_entry_header', 'genesis_do_post_image', 1 );
+
+
+/**
+ * Modify the Content Limit Read More Link on Archives
+ * 
+ * @link https://my.studiopress.com/documentation/snippets/post-excerpts/modify-the-content-limit-read-more-link/
+ */
+function wcphx_read_more_link() {
+	// return '... <a class="more-link" href="' . get_permalink() . '">[Continue Reading]</a>';
+	return '';
+}
+add_filter( 'get_the_content_more_link', 'wcphx_read_more_link' );
+
+
+/**
+	* 
+ * Restrict available blocks by post type
+ *
+ * @link https://rudrastyh.com/gutenberg/remove-default-blocks.html
+ * 
+ */
+function wcphx_editor_allowed_block_types( $allowed_blocks ) {
+ 
+	return array(
+		'core/image',
+		'core/paragraph',
+		'core/heading',
+		'core/list'
+	);
+ 
+}
+
+/**
+ * Restrict blocks by user level
+ * 
+ */
+if (!current_user_can('activate_plugins')) {
+	add_filter( 'allowed_block_types', 'wcphx_editor_allowed_block_types' );
+	return;
+}
