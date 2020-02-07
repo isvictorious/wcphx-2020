@@ -1,5 +1,96 @@
 <?php
 
+
+/**
+ * Restrict blocks for promotions post type
+ *
+ * @param [type] $allowed_blocks
+ * @param [type] $post
+ * @return void
+ * 
+ * @link https://rudrastyh.com/gutenberg/remove-default-blocks.html
+ */
+function wcphx_promotion_allowed_blocks( $allowed_blocks, $post ) {
+ 
+	if( $post->post_type === 'promotion' ) {
+		$allowed_blocks = array(
+			'core/paragraph',
+			'core/image',
+			'core/heading',
+			// 'core/gallery',
+			// 'core/list',
+			// 'core/quote',
+			// 'core/audio',
+			// 'core/cover',
+			// 'core/columns',
+			'core/video',
+			// 'core/table',
+			// 'core/verse',
+			// 'core/code',
+			// 'core/freeform',
+			// 'core/html',
+			// 'core/preformatted',
+			// 'core/pullquote',
+			// 'core/button',
+			// 'core/text-columns',
+			// 'core/media-text',
+			// 'core/more',
+			// 'core/nextpage',
+			// 'core/separator',
+			// 'core/spacer',
+			// 'core/shortcode',
+			// 'core/archives',
+			// 'core/categories',
+			// 'core/latest-comments',
+			// 'core/latest-posts',
+			// 'core/calendar',
+			// 'core/rss',
+			// 'core/search',
+			// 'core/tag-cloud',
+			// 'core/embed',
+			// 'core-embed/twitter',
+			// 'core-embed/youtube',
+			// 'core-embed/facebook',
+			// 'core-embed/instagram',
+			// 'core-embed/wordpress',
+			// 'core-embed/soundcloud',
+			// 'core-embed/spotify',
+			// 'core-embed/flickr',
+			// 'core-embed/vimeo',
+			// 'core-embed/animoto',
+			// 'core-embed/cloudup',
+			// 'core-embed/collegehumor',
+			// 'core-embed/dailymotion',
+			// 'core-embed/funnyordie',
+			// 'core-embed/hulu',
+			// 'core-embed/imgur',
+			// 'core-embed/issuu',
+			// 'core-embed/kickstarter',
+			// 'core-embed/meetup-com',
+			// 'core-embed/mixcloud',
+			// 'core-embed/photobucket',
+			// 'core-embed/polldaddy',
+			// 'core-embed/reddit',
+			// 'core-embed/reverbnation',
+			// 'core-embed/screencast',
+			// 'core-embed/scribd',
+			// 'core-embed/slideshare',
+			// 'core-embed/smugmug',
+			// 'core-embed/speaker',
+			// 'core-embed/ted',
+			// 'core-embed/tumblr',
+			// 'core-embed/videopress',
+			// 'core-embed/wordpress-tv'
+		);
+	}
+ 
+ 
+	return $allowed_blocks;
+}
+add_filter( 'allowed_block_types', 'wcphx_promotion_allowed_blocks', 10, 2 );
+
+
+
 // Register Custom Post Type
 function wcphx_promotion_post_type()
 {
@@ -45,22 +136,12 @@ function wcphx_promotion_post_type()
     'labels'                => $labels,
     'supports'              => array('title', 'editor', 'thumbnail', 'revisions', 'page-attributes'),
 		'hierarchical'          => false,
-		'capabilities' => array(
-			'read_post'					=> 'read_promotion',
-			'read_private_posts' 		=> 'read_private_promotions',
-			'edit_post'					=> 'edit_promotion',
-			'edit_posts'				=> 'edit_promotions',
-			'edit_others_posts'			=> 'edit_others_promotions',
-			'edit_published_posts'		=> 'edit_published_promotions',
-			'edit_private_posts'		=> 'edit_private_promotions',
-			'delete_post'				=> 'delete_promotion',
-			'delete_posts'				=> 'delete_promotions',
-			'delete_others_posts'		=> 'delete_others_promotions',
-			'delete_published_posts'	=> 'delete_published_promotions',
-			'delete_private_posts'		=> 'delete_private_promotions',
-			'publish_posts'				=> 'publish_promotions',
-			'moderate_comments'			=> 'moderate_promotion_comments',
-		),
+		// 'capabilities' => array(
+		// 	'read_post'					=> 'read_promotion',
+		// 	'read_private_posts' 		=> 'read_private_promotions',
+		// 	'edit_post'					=> 'edit_promotion',
+		// 	'edit_posts'				=> 'edit_promotions',
+		// ),
     'public'                => true,
     'show_ui'               => true,
     'show_in_menu'          => true,
@@ -79,3 +160,5 @@ function wcphx_promotion_post_type()
   register_post_type('promotion', $args);
 }
 add_action('init', 'wcphx_promotion_post_type', 0);
+
+
