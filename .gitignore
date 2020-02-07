@@ -1,0 +1,194 @@
+## Abstract Specific Gitignore from Bill Erickson
+# Ignore everything #
+**
+!wp-content/
+wp-content/**
+!wp-content/themes/
+!wp-content/plugins/
+wp-content/themes/**
+wp-content/plugins/**
+
+# Add two rules for each Theme or Plugin you want to include:
+# 1. !folder-name/    <-- includes the Plugin and top level files
+# 2. !folder-name/**  <-- includes the Plugin and sub level files recursively, except for the "Ignore some other system generated files" rules below
+###############################
+
+# Start editing!
+
+# Theme
+!wp-content/themes/wcphx-genesis/
+!wp-content/themes/wcphx-genesis/**
+
+# Plugin
+!wp-content/plugins/wcphx-functions/
+!wp-content/plugins/wcphx-functions/**
+
+# Stop editing!
+
+############################################
+# Ignore some other system generated files #
+############################################
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.log
+*.sql
+*.sqlite
+.DS_Store
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+.codekit-cache
+.sass-cache
+# Sublime
+*.sublime-project
+*.sublime-workspace
+# PhpStorm
+.idea/
+
+# Always include the build script #
+###################################
+!build.sh
+!README.md
+!wp-config-dev.php
+!CHANGELOG.md
+!.gitignore
+!.wpe-pull-ignore
+!.wpe-push-ignore
+
+
+#############################################
+# Below is the modified WPengine .gitignore #
+#############################################
+
+# Updated version of the older WP Engine recommended gitignore file.
+
+
+# Temporary and OS files
+*~
+.DS_Store
+*.swp
+Thumbs.db
+
+# Version Control files
+*.bak
+.svn
+.cvs
+
+# WordPress specific files
+# NOTE:
+#   WP Engine automatically updates part or all of WordPress under certain
+#   circumstances, so generally it is desirable to not version control copies of
+#   the. However, in case you do have some specific need to version control
+#   these files, you can comment out these lines.
+# wp-config.php
+# wp-content/uploads/
+# wp-content/blogs.dir/
+# wp-content/upgrade/*
+# wp-content/backup-db/*
+# wp-content/advanced-cache.php
+# wp-content/wp-cache-config.php
+# wp-content/cache/*
+# wp-content/cache/supercache/*
+
+# WP Engine specific files
+# NOTE:
+#   These files are specific to running a WordPress site at WP Engine and would
+#   likely result in a broken production site if modified in production (in
+#   fact, permissions would prevent modification for many of these files). It is
+#   strongly recommended that you do not attempt to modify these files in
+#   production.
+/_wpeprivate
+# /wp-content/object-cache.php
+# /wp-content/mu-plugins/mu-plugin.php
+# /wp-content/mu-plugins/slt-force-strong-passwords.php
+# /wp-content/mu-plugins/stop-long-comments.php
+# /wp-content/mu-plugins/force-strong-passwords*
+# /wp-content/mu-plugins/wpe-devkit*
+# /wp-content/mu-plugins/wpengine-common*
+# /wp-content/mu-plugins/wpengine-excerpt*
+# /wp-content/plugins/wpengine-snapshot/snapshots
+# /wp-content/mysql.sql
+# /.wpe-devkit
+
+# Some other files which may be desirable to skip under certain circumstances
+#.listing
+#plugins/wp-file-cache/cache
+#.cache
+#temp
+#tmp
+#*.tmp
+#imagecache*
+#*_backup
+#gt-cache
+#wp-config-sample.php
+#/wp-content/w3tc*
+#/wp-content/w3-*
+#/wp-content/uploads/snapshots
+#/wp-content/backup*
+#/wp-content/uploads/backup*
+#/wp-content/temp*
+#log.txt
+#debug.log
+#/wp-content/plugins/plugins
+#.a
+#w3tc/dbcache
+#w3tc/objectcache
+#w3tc/pgcache
+#w3tc/
+#plugins/w3-total-cache
+#pclzip*
+#*.gz
+#*.zip
+#*.tar
+#*.tgz
+
+# Large and binary files
+# NOTE:
+#   It is generally considered bad practice to version control binary asset
+#   files in the same repo as text code, but you can attempt to proceed anyway
+#   by commenting out these lines.
+*.hqx
+*.bin
+*.exe
+*.dll
+*.deb
+*.dmg
+*.iso
+*.img
+*.msi
+*.msp
+*.msm
+*.mid
+*.midi
+*.kar
+*.mp3
+*.ogg
+*.m4a
+*.ra
+*.3gpp
+*.3gp
+*.mp4
+*.mpeg
+*.mpg
+*.mov
+*.webm
+*.flv
+*.m4v
+*.mng
+*.asx
+*.asf
+*.wmv
+*.avi
