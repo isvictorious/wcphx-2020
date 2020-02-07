@@ -37,7 +37,7 @@ function wcphx_testimonial_post_type()
 		'label'                 => __('Testimonial', 'sai_functions'),
 		'description'           => __('Testimonial information page.', 'sai_functions'),
 		'labels'                => $labels,
-		'supports'              => array('title'),
+		'supports'              => array('title', 'thumbnail'),
 		'taxonomies'            => array(),
 		'hierarchical'          => false,
 		'public'                => true,
@@ -59,3 +59,53 @@ add_action('init', 'wcphx_testimonial_post_type', 0);
 
 
 
+
+
+/**
+ * Testimonial CPT updates messages.
+ *
+ * @param array $messages Existing post update messages.
+ *
+ * @return array Amended testimonial CPT notices
+ * 
+ * @link https://www.sitepoint.com/wordpress-custom-post-types-notices-taxonomies/
+ */
+function wcphx_testimonial_notices( $messages ) {
+    $post             = get_post();
+    $post_type        = get_post_type( $post );
+    $post_type_object = get_post_type_object( $post_type );
+
+    $messages['testimonial'] = array(
+        0  => '', // Unused. Messages start at index 1.
+        1  => __( 'Testimonial updated.', 'textdomain' ),
+        2  => __( 'Custom field updated.', 'textdomain' ),
+        3  => __( 'Custom field deleted.', 'textdomain' ),
+        4  => __( 'Testimonial updated.', 'textdomain' ),
+        5  => isset( $_GET['revision'] ) ? sprintf( __( 'Testimonial restored to revision from %s', 'textdomain' ), wp_post_revision_title( (int) $_GET['revision'], false ) ) : false,
+        6  => __( 'Testimonial published.', 'textdomain' ),
+        7  => __( 'Testimonial saved.', 'textdomain' ),
+        8  => __( 'Testimonial submitted.', 'textdomain' ),
+        9  => sprintf(
+            __( 'Testimonial scheduled for: <strong>%1$s</strong>.', 'textdomain' ),
+            date_i18n( __( 'M j, Y @ G:i', 'textdomain' ), strtotime( $post->post_date ) )
+        ),
+        10 => __( 'Testimonial draft updated.', 'textdomain' )
+    );
+
+    if ( $post_type_object->publicly_queryable ) {
+        $permalink = get_permalink( $post->ID );
+
+        $view_link = sprintf( ' <a href="%s">%s</a>', esc_url( $permalink ), __( 'View testimonial', 'textdomain' ) );
+        $messages[ $post_type ][1] .= $view_link;
+        $messages[ $post_type ][6] .= $view_link;
+        $messages[ $post_type ][9] .= $view_link;
+
+        $preview_permalink = add_query_arg( 'preview', 'true', $permalink );
+        $preview_link      = sprintf( ' <a target="_blank" href="%s">%s</a>', esc_url( $preview_permalink ), __( 'Preview testimonial', 'textdomain' ) );
+        $messages[ $post_type ][8] .= $preview_link;
+        $messages[ $post_type ][10] .= $preview_link;
+    }
+
+    return $messages;
+}
+add_filter( 'post_updated_messages', 'wcphx_testimonial_notices' );
