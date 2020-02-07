@@ -1,6 +1,0 @@
-/composer.lock
-/phpcs.xml
-node_modules/
-vendor/
-.DS_Store
-/config.codekit3

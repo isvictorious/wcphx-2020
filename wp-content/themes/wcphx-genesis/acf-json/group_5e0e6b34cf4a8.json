@@ -1,0 +1,123 @@
+{
+    "key": "group_5e0e6b34cf4a8",
+    "title": "Testimonial",
+    "fields": [
+        {
+            "key": "field_5e0e6b6d3e626",
+            "label": "First and Last Name",
+            "name": "testimonial_full_name",
+            "type": "text",
+            "instructions": "What is your name? First name is okay.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "Your name",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5e0e6bbc3e627",
+            "label": "Organization Name",
+            "name": "testimonial_org_name",
+            "type": "text",
+            "instructions": "What is your company or organization name?",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "Your company or organization",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5e273f6713e5b",
+            "label": "Email Address",
+            "name": "testimonial_email",
+            "type": "email",
+            "instructions": "Enter your e-mail address",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "name@email.com",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_5e0e6bff3e628",
+            "label": "Your Testimonial",
+            "name": "testimonial_text",
+            "type": "textarea",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "Your testimonial...",
+            "maxlength": "",
+            "rows": 4,
+            "new_lines": ""
+        },
+        {
+            "key": "field_5e0e6c377aed7",
+            "label": "Your photo",
+            "name": "testimonial_photo",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": 250,
+            "min_height": 250,
+            "min_size": "",
+            "max_width": 1000,
+            "max_height": 1000,
+            "max_size": 2,
+            "mime_types": "jpg, png, gif"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "testimonial"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1579886137
+}
