@@ -229,7 +229,7 @@ function genesis_sample_comments_gravatar( $args ) {
 
 
 /* NEW STUFF
----------------------------------- */
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 
 /**
  * Modify the placeholder text in the editor
@@ -237,7 +237,7 @@ function genesis_sample_comments_gravatar( $args ) {
  * @return void
  */
 function wcphx_editor_placeholder() {
-    $placeholder = 'Start writing or add a block with /';
+    $placeholder = 'Start writing or add a block with / WCPHX';
     return $placeholder;
 }
 add_filter( 'write_your_story', 'wcphx_editor_placeholder' );
